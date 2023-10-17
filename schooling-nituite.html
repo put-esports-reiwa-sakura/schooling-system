@@ -231,6 +231,12 @@ document.getElementById("menuButton2").addEventListener("click", function (event
             page.style.display = "none";
         });
     }
+
+// ページが読み込まれたときに実行する関数を設定
+window.onload = function() {
+    // ページを一番上にスクロールする
+    window.scrollTo(0, 0);
+};
 </script>
 </body>
 </html>
