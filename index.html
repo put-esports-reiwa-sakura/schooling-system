@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="format-detection" content="telephone=no">
+		<title>令和さくら高等学院-情報板</title>
+		<!-- 上から Roboto , Zen Maru Gothic , Noto Sans Japanese , english- Poppins -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+		<link rel="stylesheet" type="text/css" href="mainstyle.css">
+	</head>
+	<body>
+		<!-- 著作権表示 -->
+		<div class="menu-copyright">&copy; 2023 reiwa-sakura, one person Aoyama programming team.</div>
+		<div class="page-main">
+			<div class="menu-page-style">
+				<div id="menu-page">
+					<h1>令和さくら高等学院 情報板</h1>
+					<p>以下のボタンをクリックして他のページに移動できます</p>
+					<a onclick="location.href = 'schooling-nituite.html'"><button class="button">令和5年度スクーリングについて</button></a>
+					<button id="go-to-page2" class="button">お知らせ</button>
+				</div>
+			</div>
+			<div id="page2" class="page-container">
+				<h1>お知らせ</h1>
+				<button id="back-to-menu-2" class="button">戻る</button>
+				<div>
+					<h2>こちらのページは当日に使用するお知らせ用のページです。</h2>
+					<p>現在は特に重要なお知らせなどはございません。</p>
+					<p>荷物の準備などを着々と進めていきましょう。</p>
+				</div>
+			</div>
+		</div>
+		<script>
+		// ページ2への移動ボタンの処理
+		document.getElementById('go-to-page2').addEventListener('click', function () {
+			document.getElementById('menu-page').style.display = 'none';
+			document.getElementById('page2').style.display = 'block';
+		});
+		// ページ2からメニューページに戻るボタンの処理
+		document.getElementById('back-to-menu-2').addEventListener('click', function () {
+			document.getElementById('menu-page').style.display = 'block';
+			document.getElementById('page2').style.display = 'none';
+		});
+		</script>
+	</body>
+</html>
