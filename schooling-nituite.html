@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="format-detection" content="telephone=no">
+    <title>令和さくら高等学院-スクーリング</title>
+    <!-- 上から Roboto , Zen Maru Gothic , Noto Sans Japanese , english- Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    <style>
+        /* ダークモードのスタイル */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .page-size {
+            padding: 0; /* ページ全体に余白なし */
+        }
+        iframe {
+            width: 100%;
+            height: 80vh; /* ブラウザの縦のサイズに合わせる */
+            border: none;
+			background-color: #393939;
+        }
+		@media (max-width: 320px) {iframe{height: 50vh;}}
+		@media (max-width: 375px) {iframe {height: 60vh;}}
+		@media (max-width: 425px) {iframe {height: 70vh;}}
+
+        .button-size {
+            padding: 0 10px;
+            text-align: center;
+            align-items: center;
+        }
+        /* 戻るボタンの色だけピンク */
+        #back-to-menu-2 {background-color: #ea4335;}
+		#page2 button,#menuButton2 {
+			background-color: dimgray;
+		}
+		#page2 button:hover {
+			background-color: #4285f4;
+		}
+    </style>
+	<script>
+    // iframeの高さをコンテンツの高さに合わせる関数
+    function adjustIframeHeight() {
+        const iframe = document.querySelector("iframe");
+        if (iframe) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+        }
+    }
+
+    // コンテンツを読み込む関数
+    function loadContent(content) {
+        showPage(currentPage, content);
+        const iframe = document.getElementById("content").querySelector("iframe");
+        if (iframe) {
+            iframe.src = `${content}.html`;
+            iframe.onload = adjustIframeHeight;
+        }
+    }
+</script>
+</head>
+<body>
+<div class="menu-copyright">&copy; 2023 reiwa-sakura, one person Aoyama programming team.</div>
+<div class="page-size">
+    <div class="menu-button">
+        <div class="page-title">
+            <!-- ページ1 内容 -->
+            <h1>令和5年度スクーリングについて</h1>
+            <p>10月31日(火)～11月3日(金)</p>
+        </div>
+		<div class="button-size">
+        <a onclick="location.href = 'index.html'"><button id="back-to-menu-2">戻る</button></a>
+        <button id="menuButton1">スクーリング詳細</button>
+        <button id="menuButton2">全体行程</button>
+        <p id="menuDescription">それぞれのボタンを押してください。</p>
+		</div>
+    </div>
+
+    <div class="page button-size" id="page1">
+        <button onclick="loadContent('nimotu')">荷物</button>
+        <button onclick="loadContent('schooling-setumei')">スクーリングとルール</button> <!--overview-->
+        <a onclick="location.href = 'nimotu-kakunin.html'"><button>各教科の必要な荷物</button></a> <!--description-->
+    </div>
+
+    <div class="page button-size" id="page2">
+        <button onclick="loadContent('koutei-iki-train')">行き電車</button>
+        <button onclick="loadContent('1day')">1日目</button>
+        <button onclick="loadContent('2day')">2日目</button>
+        <button onclick="loadContent('3day')">3日目</button>
+        <button onclick="loadContent('4day')">4日目</button>
+        <button onclick="loadContent('koutei-kaeri-train')">帰り電車</button>
+    </div>
+    <div class="page-content" id="content">
+		<div class="schooling-setumei">
+			<h1>スクーリングとは</h1>
+			<p>文科省から通信制高校に義務付けられた制度で直接先生からの授業や指導を受けることをスクーリング（面接指導＝対面授業）といいます。<br>明蓬館高校では年4日間のスクーリングが義務づけられており、<span class="aka">単位取得要件</span>として必要事項となります。</p>
+			<h1>スクーリングの目的</h1>
+			<p>①自立することと、協調することを学ぶ<br>②わからないことを直接本校の先生に聞く<br>③力を合わせ、助け合うことの共通体験をつくる<br>④本校のある川崎町の地域の特性を知り、学ぶ</p>
+		</div>
+	</div>
+</div>
+<script>
+    // ボタンがクリックされたときに iframe を生成する関数
+    function createIframe(content) {
+        const contentContainer = document.getElementById("content");
+
+        // iframe 要素を生成して追加する
+        const iframe = document.createElement("iframe");
+        iframe.src = `${content}.html`;
+        iframe.onload = function () {
+            adjustIframeHeight(iframe);
+        };
+
+        // 既存の iframe 要素を削除する
+        const existingIframe = contentContainer.querySelector("iframe");
+        if (existingIframe) {
+            contentContainer.removeChild(existingIframe);
+        }
+
+        // 新しい iframe 要素を content に追加する
+        contentContainer.appendChild(iframe);
+    }
+</script>
+<script>
+    // 初期のページとコンテンツを設定
+    let currentPage = "";
+    let currentContent = "";
+
+    // URLのハッシュによって初期表示を切り替え
+    window.addEventListener("load", function () {
+        handleHashChange();
+        hidePages(); // ページを非表示にする
+    });
+
+    // ページを表示または非表示にする関数
+    function showPage(pageId, contentId) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach(page => {
+            if (page.id === pageId) {
+                page.style.display = "block";
+            } else {
+                page.style.display = "none";
+            }
+        });
+
+        // 解説文を非表示にする
+        document.getElementById("menuDescription").style.display = "none";
+
+        // ページとコンテンツを更新
+        currentPage = pageId;
+        currentContent = contentId;
+
+        // URLのハッシュを更新
+        if (contentId) {
+            window.location.hash = `#${pageId}/${contentId}`;
+        } else {
+            window.location.hash = `#${pageId}`;
+        }
+    }
+
+document.getElementById("menuButton1").addEventListener("click", function (event) {
+    showPage("page1", "");
+	window.scrollTo(0, -100);
+});
+
+document.getElementById("menuButton2").addEventListener("click", function (event) {
+    showPage("page2", "");
+	window.scrollTo(0, -100);
+});
+
+
+    // コンテンツを読み込む関数
+    function loadContent(content) {
+        showPage(currentPage, content);
+        const contentContainer = document.getElementById("content");
+        
+        // .schooling-setumei 要素を非表示にする
+        const schoolingSetumei = contentContainer.querySelector(".schooling-setumei");
+        if (schoolingSetumei) {
+            schoolingSetumei.style.display = "none";
+        }
+        
+        // iframe要素を生成して追加する
+        const iframe = document.createElement("iframe");
+        iframe.src = `${content}.html`;
+        iframe.onload = adjustIframeHeight;
+        
+        // 既存の iframe 要素を削除する
+        const existingIframe = contentContainer.querySelector("iframe");
+        if (existingIframe) {
+            contentContainer.removeChild(existingIframe);
+        }
+        
+        // 新しい iframe 要素を content に追加する
+        contentContainer.appendChild(iframe);
+    }
+
+    // URLのハッシュが変更されたときに呼ばれる関数
+    window.addEventListener("hashchange", function () {
+        handleHashChange();
+    });
+
+    // URLのハッシュを解析してページとコンテンツを表示する関数
+    function handleHashChange() {
+        const hash = window.location.hash.substr(1);
+        const parts = hash.split("/");
+        const page = parts[0];
+        const content = parts[1];
+
+        if (page === "page1" && content) {
+            showPage(page, content);
+        } else if (page === "page2" && content) {
+            showPage(page, content);
+        } else if (page === "page1" || page === "page2") {
+            showPage(page, "");
+        }
+        // ハッシュが不正な場合、何も表示しない（デフォルト状態）
+    }
+
+    // ページを非表示にする関数
+    function hidePages() {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach(page => {
+            page.style.display = "none";
+        });
+    }
+</script>
+</body>
+</html>
