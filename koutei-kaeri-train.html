@@ -1,422 +1,405 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex, nofollow">
     <meta name="format-detection" content="telephone=no">
-	<title>令和さくら高等学院-帰り電車</title>
-	<!-- 上から Roboto , Zen Maru Gothic , Noto Sans Japanese , english- Poppins -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-	<link rel="stylesheet" type="text/css" href="train-ikikaeri.css">
-	<style>body{background-color: #333;}</style>
-	</head>	
-	<body>
-		<div class="iki-body"> <!-- main -->
-			<div class="mainWrp iki-div">
-				<div class="iki-zyoho">
-					<p>このサイトは<img src="https://s.yimg.jp/c/logo/f/2.0/transit_r_34_2x.png" alt="Transit Logo" class="logo">から抜粋した情報です。</p>
-					<div class="kaeri-col-base">
-						駅の色早見表<br>
-						<span style="background:#ffffffcf;color: #000;">行きの時に止まった駅</span><br>
-						<span style="background:#6a6b60bf;">行きに止まってない駅</span><br>(帰りはこれらの駅にも止まります。)
+    <title>令和さくら高等学院-帰り電車</title>
+    <style>
+        body {
+            color: #FFFFFF; /* テキストの色 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+		.titlemozi {
+			position: sticky;
+			text-align: center;
+			top: 0%;
+			z-index: 999;
+			background-color: rgb(51 51 51 / 50%);
+		}
+		.titlemozi h1{padding: 0;}
+        .container {
+            max-width: 100%;
+            padding: 20px;
+        }
+
+        .results {
+            background-color: #1e1e1e;
+            padding: 20px;
+            list-style: none;
+        }
+
+        .train {
+            display: flex;
+            align-items: center;
+			border-radius: 5px;
+            border: 1px solid #333;
+			background-color: #313131;
+        }
+
+        .train-time {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            padding: 5px;
+        }
+		
+		
+		.train-time::before {
+			content: '';
+			border-left: 1px solid #666; /* 縦の線を追加 */
+			height: 100%; /* 高さを親要素に合わせる */
+			position: absolute;
+			left: -10px; /* 位置調整 */
+		}
+		
+        .station-name {
+            font-weight: bold;
+            flex-grow: 1;
+            text-align: left;
+            padding: 5px;
+        }
+		
+        .travel-time {
+			width: 85px;
+			padding: 10px;
+			border-right: 6px solid #02ff00;
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+		<div>
+		<div class="titlemozi"><h1>帰り電車 時刻表</h1>
+		<p>名鉄空港線 中部国際空港(鉄道)発→新可児行き停車駅一覧</p></div>
+			<ul class="results">
+				<li class="train">
+					<div class="train-time">
+						<span>18:51 発</span>
 					</div>
-				</div>
-						<div id="mdDiaStopSta">
-							<div class="labelLarge">
-								<div>
-									<span class="staKana">かえりのじこくひょう</span>
-									<h1 class="title">帰りの時刻表</h1>
-								</div>
-							</div>
-							<div class="labelMedium">
-								<h2 class="title">名鉄空港線<!-- -->
-									<!-- -->中部国際空港(鉄道)発→新可児行き<!-- -->停車駅一覧</h2>
-							</div>
-							<div>
-								<p class="txtTrainInfo">18:51<!-- -->
-									<!-- -->中部国際空港(鉄道)<!-- -->発　<!-- -->名鉄空港線<!-- -->
-									<!-- -->準急<!-- -->　始発：<!-- -->中部国際空港(鉄道)<!-- -->駅</p>
-								<ul class="kaeri-station">
-									<ul class="elmStopSta">
-										<li class="current">
-											<div class="iki-col2">
-												<div class="station">
-													<ul class="time">
-														<li>18:51<!-- -->発</li>
-													</ul>
-													<p class="title">中部国際空港(鉄道)</p>
-												</div>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>18:54<!-- -->着</li>
-													<li>18:54<!-- -->発</li>
-												</ul>
-												<p class="title">りんくう常滑</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>18:56<!-- -->着</li>
-													<li>18:57<!-- -->発</li>
-												</ul>
-												<p class="title">常滑</p>
-											</div>
-											<p class="estimatedTime">4<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:01<!-- -->着</li>
-													<li>19:01<!-- -->発</li>
-												</ul>
-												<p class="title">大野町</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:03<!-- -->着</li>
-													<li>19:04<!-- -->発</li>
-												</ul>
-												<p class="title">新舞子</p>
-											</div>
-											<p class="estimatedTime">4<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:08<!-- -->着</li>
-													<li>19:08<!-- -->発</li>
-												</ul>
-												<p class="title">古見(愛知県)</p>
-											</div>
-											<p class="estimatedTime">1<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:09<!-- -->着</li>
-													<li>19:10<!-- -->発</li>
-												</ul>
-												<p class="title">朝倉(愛知県)</p>
-											</div>
-											<p class="estimatedTime">1<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:11<!-- -->着</li>
-													<li>19:12<!-- -->発</li>
-												</ul>
-												<p class="title">寺本</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:14<!-- -->着</li>
-													<li>19:14<!-- -->発</li>
-												</ul>
-												<p class="title">尾張横須賀</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:16<!-- -->着</li>
-													<li>19:17<!-- -->発</li>
-												</ul>
-												<p class="title">太田川</p>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:20<!-- -->着</li>
-													<li>19:22<!-- -->発</li>
-												</ul>
-												<p class="title">聚楽園</p>
-											</div>
-											<p class="estimatedTime">4<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:26<!-- -->着</li>
-													<li>19:26<!-- -->発</li>
-												</ul>
-												<p class="title">大同町</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:28<!-- -->着</li>
-													<li>19:29<!-- -->発</li>
-												</ul>
-												<p class="title">大江(愛知県)</p>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>19:32<!-- -->着</li>
-														<li>19:33<!-- -->発</li>
-													</ul>
-													<p class="title">神宮前</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>19:35<!-- -->着</li>
-														<li>19:36<!-- -->発</li>
-													</ul>
-													<p class="title">金山(愛知県)</p>
-												</div>
-											</div>
-											<p class="estimatedTime">4<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>19:40<!-- -->着</li>
-														<li>19:40<!-- -->発</li>
-													</ul>
-													<p class="title">名鉄名古屋</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:42<!-- -->着</li>
-													<li>19:43<!-- -->発</li>
-												</ul>
-												<p class="title">栄生</p>
-											</div>
-											<p class="estimatedTime">5<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:48<!-- -->着</li>
-													<li>19:48<!-- -->発</li>
-												</ul>
-												<p class="title">上小田井</p>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:51<!-- -->着</li>
-													<li>19:51<!-- -->発</li>
-												</ul>
-												<p class="title">西春</p>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>19:54<!-- -->着</li>
-														<li>19:55<!-- -->発</li>
-													</ul>
-													<p class="title">岩倉(愛知県)</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>19:57<!-- -->着</li>
-													<li>19:58<!-- -->発</li>
-												</ul>
-												<p class="title">石仏</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:00<!-- -->着</li>
-													<li>20:01<!-- -->発</li>
-												</ul>
-												<p class="title">布袋</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>20:03<!-- -->着</li>
-														<li>20:03<!-- -->発</li>
-													</ul>
-													<p class="title">江南(愛知県)</p>
-												</div>
-											</div>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:06<!-- -->着</li>
-													<li>20:07<!-- -->発</li>
-												</ul>
-												<p class="title">柏森</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:09<!-- -->着</li>
-													<li>20:10<!-- -->発</li>
-												</ul>
-												<p class="title">扶桑</p>
-											</div>
-											<p class="estimatedTime">1<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:11<!-- -->着</li>
-													<li>20:12<!-- -->発</li>
-												</ul>
-												<p class="title">木津用水</p>
-											</div>
-											<p class="estimatedTime">1<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:13<!-- -->着</li>
-													<li>20:14<!-- -->発</li>
-												</ul>
-												<p class="title">犬山口</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="iki-col1">
-												<div class="station">
-													<ul class="time">
-														<li>20:16<!-- -->着</li>
-														<li>20:21<!-- -->発</li>
-													</ul>
-													<p class="title">犬山</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:23<!-- -->着</li>
-													<li>20:24<!-- -->発</li>
-												</ul>
-												<p class="title">富岡前</p>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="station kaeri-stop-col">
-												<ul class="time">
-													<li>20:26<!-- -->着</li>
-													<li>20:26<!-- -->発</li>
-												</ul>
-												<p class="title">善師野</p>
-											</div>
-											<p class="estimatedTime">5<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>20:31<!-- -->着</li>
-														<li>20:31<!-- -->発</li>
-													</ul>
-													<p class="title">西可児</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>20:33<!-- -->着</li>
-														<li>20:34<!-- -->発</li>
-													</ul>
-													<p class="title">可児川</p>
-												</div>
-											</div>
-											<p class="estimatedTime">2<!-- -->分</p>
-										</li>
-										<li>
-											<li class="current">
-												<div class="station">
-													<ul class="time">
-														<li>20:36<!-- -->着</li>
-														<li>20:37<!-- -->発</li>
-													</ul>
-													<p class="title">日本ライン今渡</p>
-												</div>
-											</li>
-											<p class="estimatedTime">3<!-- -->分</p>
-										</li>
-										<li>
-											<div class="kaeri-col">
-												<div class="station">
-													<ul class="time">
-														<li>20:40<!-- -->着</li>
-													</ul>
-													<p class="title">新可児</p>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</ul>
-								<div class="boxNote">
-									<dl>
-										<dt>注釈</dt>
-										<dd>準急</dd>
-										<dd>平日運転・2023年9月2日から有効</dd>
-										<dd>犬山−新可児間は普通で運転。</dd>
-									</dl>
-								</div>
-							</div>
-						</div>
-						<p class="navBack">
-							<a href="/timetable/29529/3590?kind=1">名鉄空港線 中部国際空港(鉄道) 駅へ戻る</a>
-						</p>
+					<div class="station-name">中部国際空港(鉄道)</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>18:54着</span>
+						<span>18:54発</span>
 					</div>
-				</div>
-			</body>
-		</html>
+					<div class="station-name">りんくう常滑</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>18:56着</span>
+						<span>18:57発</span>
+					</div>
+					<div class="station-name">常滑</div>
+				</li>
+				<div class="travel-time">4分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:01着</span>
+						<span>19:01発</span>
+					</div>
+					<div class="station-name">大野町</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:03着</span>
+						<span>19:04発</span>
+					</div>
+					<div class="station-name">新舞子</div>
+				</li>
+				<div class="travel-time">4分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:08着</span>
+						<span>19:08発</span>
+					</div>
+					<div class="station-name">古見(愛知県)</div>
+				</li>
+				<div class="travel-time">1分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:09着</span>
+						<span>19:10発</span>
+					</div>
+					<div class="station-name">朝倉(愛知県)</div>
+				</li>
+				<div class="travel-time">1分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:11着</span>
+						<span>19:12発</span>
+					</div>
+					<div class="station-name">寺本</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:14着</span>
+						<span>19:14発</span>
+					</div>
+					<div class="station-name">尾張横須賀</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:16着</span>
+						<span>19:17発</span>
+					</div>
+					<div class="station-name">太田川</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:20着</span>
+						<span>19:22発</span>
+					</div>
+					<div class="station-name">聚楽園</div>
+				</li>
+				<div class="travel-time">4分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:26着</span>
+						<span>19:26発</span>
+					</div>
+					<div class="station-name">大同町</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:28着</span>
+						<span>19:29発</span>
+					</div>
+					<div class="station-name">大江(愛知県)</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:32着</span>
+						<span>19:33発</span>
+					</div>
+					<div class="station-name">神宮前</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:35着</span>
+						<span>19:36発</span>
+					</div>
+					<div class="station-name">金山(愛知県)</div>
+				</li>
+				<div class="travel-time">4分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:40着</span>
+						<span>19:40発</span>
+					</div>
+					<div class="station-name">名鉄名古屋</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:42着</span>
+						<span>19:43発</span>
+					</div>
+					<div class="station-name">栄生</div>
+				</li>
+				<div class="travel-time">5分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:48着</span>
+						<span>19:48発</span>
+					</div>
+					<div class="station-name">上小田井</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:51着</span>
+						<span>19:51発</span>
+					</div>
+					<div class="station-name">西春</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:54着</span>
+						<span>19:55発</span>
+					</div>
+					<div class="station-name">岩倉(愛知県)</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>19:57着</span>
+						<span>19:58発</span>
+					</div>
+					<div class="station-name">石仏</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:00着</span>
+						<span>20:01発</span>
+					</div>
+					<div class="station-name">布袋</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:03着</span>
+						<span>20:03発</span>
+					</div>
+					<div class="station-name">江南(愛知県)</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:06着</span>
+						<span>20:07発</span>
+					</div>
+					<div class="station-name">柏森</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:09着</span>
+						<span>20:10発</span>
+					</div>
+					<div class="station-name">扶桑</div>
+				</li>
+				<div class="travel-time">1分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:11着</span>
+						<span>20:12発</span>
+					</div>
+					<div class="station-name">木津用水</div>
+				</li>
+				<div class="travel-time">1分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:13着</span>
+						<span>20:14発</span>
+					</div>
+					<div class="station-name">犬山口</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:16着</span>
+						<span>20:21発</span>
+					</div>
+					<div class="station-name">犬山</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:23着</span>
+						<span>20:24発</span>
+					</div>
+					<div class="station-name">富岡前</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:26着</span>
+						<span>20:26発</span>
+					</div>
+					<div class="station-name">善師野</div>
+				</li>
+				<div class="travel-time">5分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:31着</span>
+						<span>20:31発</span>
+					</div>
+					<div class="station-name">西可児</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:33着</span>
+						<span>20:34発</span>
+					</div>
+					<div class="station-name">可児川</div>
+				</li>
+				<div class="travel-time">2分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:36着</span>
+						<span>20:37発</span>
+					</div>
+					<div class="station-name">日本ライン今渡</div>
+				</li>
+				<div class="travel-time">3分</div>
+				<li class="train">
+					<div class="train-time">
+						<span>20:40着</span>
+					</div>
+					<div class="station-name">新可児</div>
+				</li>
+			<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
+			</ul>
+		</div>
+    </div>
+    <script>
+        // 特定の駅にGoogleカラーバリエーションの背景色を適用
+        const googleBlueStations = ['日本ライン今渡'];
+        const googleGreenStations = ['犬山'];
+        const googleOrangeStations = ['中部国際空港(鉄道)'];
+		const pattern1 =['神宮前','金山(愛知県)','名鉄名古屋','岩倉(愛知県)','江南(愛知県)','西可児','可児川','新可児']
+        const trainStations = document.querySelectorAll('.train');
+        trainStations.forEach(train => {
+        const stationName = train.querySelector('.station-name').textContent.trim();
+            if (googleBlueStations.includes(stationName)) {
+                train.style.backgroundColor = '#4285F4';
+            } else if (googleGreenStations.includes(stationName)) {
+                train.style.backgroundColor = '#0F9D58';
+            } else if (googleOrangeStations.includes(stationName)) {
+                train.style.backgroundColor = '#FF5722';
+            } else if (pattern1.includes(stationName)) {
+                train.style.backgroundColor = '#777';
+            }
+        });
+    </script>
+    <script>
+        const trainAnimations = document.querySelectorAll('.color-animation');
+        const arrivalTimes = document.querySelectorAll('.arrival-time');
+        const departureTimes = document.querySelectorAll('.departure-time');
+        const travelTimes = document.querySelectorAll('.travel-time');
+
+        function animateTrain(index) {
+            const arrivalTime = new Date(arrivalTimes[index].textContent.trim() + ' GMT+0900');
+            const departureTime = new Date(departureTimes[index].textContent.trim() + ' GMT+0900');
+            const travelTime = parseInt(travelTimes[index].textContent, 10) * 1000;
+            const duration = departureTime - arrivalTime;
+
+            trainAnimations[index].style.transition = `transform ${duration}ms linear`;
+            trainAnimations[index].style.transform = 'translateX(100%)';
+
+            if (index + 1 < trainAnimations.length) {
+                setTimeout(() => {
+                    animateTrain(index + 1);
+                }, travelTime);
+            }
+        }
+
+        function startTrainAnimation() {
+            animateTrain(0);
+        }
+
+        // 初めのアニメーションを開始
+        startTrainAnimation();
+    </script>
+</body>
+</html>
