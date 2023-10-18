@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ダークモードのサンプル</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dropdown-list {
+            flex: 1;
+            font-size: 16px;
+            padding: 8px;
+            border: 2px solid #4285f4;
+            background-color: #202124;
+            color: #ffffff;
+            border-radius: 8px;
+        }
+        .custom-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .content div {
+            max-width: 600px;
+            margin: 10px auto;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            font-family: 'Zen Maru Gothic', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <select class="dropdown-list">
+        <option value="1日目">1日目</option>
+        <option value="2日目">2日目</option>
+        <option value="3日目">3日目</option>
+        <option value="4日目">4日目</option>
+    </select>
+    <button class="custom-button" id="loadDataButton">データを読み込む</button>
+    <div class="content" id="eventDisplay"></div>
+<script>
+    // JSONファイルを読み込む関数
+    function loadJSON(callback) {
+        var xhr = new XMLHttpRequest();
+        var jsonUrl = 'spreadsheetdata.json'; // ファイル名のみ指定
+        xhr.overrideMimeType("application/json");
+        xhr.open('GET', jsonUrl, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                callback(xhr.responseText);
+            }
+        };
+        xhr.send(null);
+    }
+
+    // ボタンが押されたときの動作
+    document.getElementById('loadDataButton').addEventListener('click', function () {
+        var dropdownValue = document.querySelector('.dropdown-list').value;
+
+        // 指定の条件に合致するか確認
+        if (dropdownValue === jsonData.B) {
+            if (jsonData.L === '常時表示' || jsonData.L === 'お知らせ' || jsonData.L === '特別') {
+                // 条件1: キーLが 常時表示、お知らせ、特別 の場合
+                document.getElementById('eventDisplay').innerText = "条件1 " + jsonData.F;
+            } else if (jsonData.L === 'ok') {
+                // 条件2: キーLが ok の場合
+                document.getElementById('eventDisplay').innerText = "条件2 " + jsonData.G;
+            } else if (jsonData.L && jsonData.L !== ' ') {
+                // 条件3: キーLが 常時表示、お知らせ、特別、ok 以外であり、空白も除外
+                document.getElementById('eventDisplay').innerText = "条件3 " + jsonData.H;
+            }
+        }
+    });
+
+    // JSONデータを保持する変数
+    var jsonData;
+
+    // JSONファイルを読み込み、データをjsonData変数に格納
+    loadJSON(function (response) {
+        jsonData = JSON.parse(response);
+    });
+</script>
+
+</body>
+</html>
