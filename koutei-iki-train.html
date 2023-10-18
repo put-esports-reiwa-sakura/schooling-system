@@ -13,7 +13,14 @@
             margin: 0;
             padding: 0;
         }
-
+		.titlemozi {
+			position: sticky;
+			text-align: center;
+			top: 0%;
+			z-index: 999;
+			background-color: rgb(51 51 51 / 50%);
+		}
+		.titlemozi h1{padding: 0;}
         .container {
             max-width: 100%;
             padding: 20px;
@@ -64,20 +71,13 @@
 			border-right: 6px solid #02ff00;
 			text-align: center;
 		}
-		.titlemozi {
-			position: sticky;
-			text-align: center;
-			top: 0;
-			left: 0%;
-			z-index: 999;
-			background-color: rgb(51 51 51 / 50%);
-		}
     </style>
 </head>
 <body>
     <div class="container">
 		<div>
-		<div class="titlemozi"><h1>行き電車 時刻表</h1></div>
+		<div class="titlemozi"><h1>行き電車 時刻表</h1>
+		<p>名鉄広見線ミュースカイ 新可児発→中部国際空港(鉄道)行き 停車駅一覧</p></div>
 			<ul class="results">
 				<li class="train">
 					<div class="train-time">
