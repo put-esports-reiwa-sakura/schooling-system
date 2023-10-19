@@ -11,31 +11,31 @@
     <link rel="stylesheet" type="text/css" href="mainstyle.css">
     <style>
         body {
-		font-family: 'Roboto', sans-serif;
-		color: #ffffff;
-		margin: 0;
-		padding: 0;
-		font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
         }
         .page-size {
-		padding: 0;
+            padding: 0;
         }
         iframe {
-		width: 100%;
-		height: 120vh;
-		border: none;
-		background-color: #393939;
+            width: 100%;
+            height: 120vh;
+            border: none;
+			background-color: #393939;
         }
 		@media (max-width: 320px) {iframe{height: 90vh;}}
 		@media (max-width: 375px) {iframe {height: 100vh;}}
 		@media (max-width: 425px) {iframe {height: 1100vh;}}
 
         .button-size {
-		border: 1px solid #ddd;
-		border-radius: 20px;
-		padding: 0 10px;
-		text-align: center;
-		align-items: center;
+	    border: 1px solid #ddd;
+	    border-radius: 20px;
+            padding: 0 10px;
+            text-align: center;
+            align-items: center;
         }
         #back-to-menu-2 {background-color: #ea4335;}
 	#page2 button,#menuButton2 {background-color: #fbbc05;}
@@ -73,15 +73,15 @@
         </div>
 	<div class="button-size">
 	        <a onclick="location.href = 'index.html'"><button id="back-to-menu-2">戻る</button></a>
-	        <button id="menuButton1">スクーリング詳細</button>
+	        <button id="menuButton1">ｽｸｰﾘﾝｸﾞ詳細</button>
 		<button id="menuButton2" style="background-color:#34a853;" onclick="loadContent('event-main')">全体行程</button>
         	<p id="menuDescription">それぞれのボタンを押してください。</p>
 	</div>
     </div>
     <div class="page button-size" id="page1">
         <button onclick="loadContent('nimotu')">荷物</button>
-        <button onclick="loadContent('schooling-setumei')">スクーリングとルール</button>
-        <a onclick="location.href = 'nimotu-kakunin.html'"><button>各教科の必要な荷物</button></a>
+        <button onclick="loadContent('schooling-setumei')">説明とﾙｰﾙ</button>
+        <a onclick="location.href = 'nimotu-kakunin.html'"><button>各教科の荷物</button></a>
     </div>
     <div class="page button-size" id="page2">
         <button onclick="loadContent('koutei-iki-train')">行き電車</button>
