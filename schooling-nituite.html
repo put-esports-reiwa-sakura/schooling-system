@@ -17,16 +17,18 @@
             padding: 0;
             font-size: 16px;
         }
-        .page-size {padding: 0;}
-        iframe {
-		width: 100%;
-		height: 80vh;
-		border: none;
-		background-color: #393939;
+        .page-size {
+            padding: 0;
         }
-	@media (max-width: 320px) {iframe{height: 50vh;}}
-	@media (max-width: 375px) {iframe {height: 60vh;}}
-	@media (max-width: 425px) {iframe {height: 70vh;}}
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+			background-color: #393939;
+        }
+		@media (max-width: 320px) {iframe{height: 50vh;}}
+		@media (max-width: 375px) {iframe {height: 60vh;}}
+		@media (max-width: 425px) {iframe {height: 70vh;}}
 
         .button-size {
 	    border: 1px solid #ddd;
@@ -42,21 +44,21 @@
 	#page1 button:hover {background-color: #009b85;}
     </style>
 	<script>
-    function adjustIframeHeight() {
-        const iframe = document.querySelector("iframe");
-        if (iframe) {
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-        }
-    }
-    function loadContent(content) {
-        showPage(currentPage, content);
-        const iframe = document.getElementById("content").querySelector("iframe");
-        if (iframe) {
-            iframe.src = `${content}.html`;
-            iframe.onload = adjustIframeHeight;
-        }
-    }
-</script>
+	    function adjustIframeHeight() {
+	        const iframe = document.querySelector("iframe");
+	        if (iframe) {
+	            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+	        }
+	    }
+	    function loadContent(content) {
+	        showPage(currentPage, content);
+	        const iframe = document.getElementById("content").querySelector("iframe");
+	        if (iframe) {
+	            iframe.src = `${content}.html`;
+	            iframe.onload = adjustIframeHeight;
+	        }
+	    }
+	</script>
 </head>
 <body>
 <div class="menu-copyright">&copy; 2023 reiwa-sakura, one person Aoyama programming team.</div>
@@ -67,10 +69,10 @@
             <p>10月31日(火)～11月3日(金)</p>
         </div>
 	<div class="button-size">
-        <a onclick="location.href = 'index.html'"><button id="back-to-menu-2">戻る</button></a>
-        <button id="menuButton1">スクーリング詳細</button>
+	        <a onclick="location.href = 'index.html'"><button id="back-to-menu-2">戻る</button></a>
+	        <button id="menuButton1">スクーリング詳細</button>
 		<button id="menuButton2" style="background-color:#34a853;" onclick="loadContent('event-main')">全体行程</button>
-        <p id="menuDescription">それぞれのボタンを押してください。</p>
+        	<p id="menuDescription">それぞれのボタンを押してください。</p>
 	</div>
     </div>
     <div class="page button-size" id="page1">
@@ -90,32 +92,33 @@
 	</div>
 </div>
 <script>
+	const iframe = document.querySelector("iframe");
+	if (iframe && iframe.src.includes("event-main.html")) {
+		iframe.style.height = "44em";
+	}
+</script>
+<script>
     function createIframe(content) {
         const contentContainer = document.getElementById("content");
-
         const iframe = document.createElement("iframe");
         iframe.src = `${content}.html`;
         iframe.onload = function () {
             adjustIframeHeight(iframe);
         };
-
         const existingIframe = contentContainer.querySelector("iframe");
         if (existingIframe) {
             contentContainer.removeChild(existingIframe);
         }
-
         contentContainer.appendChild(iframe);
     }
 </script>
 <script>
     let currentPage = "";
     let currentContent = "";
-
     window.addEventListener("load", function () {
         handleHashChange();
         hidePages();
     });
-
     function showPage(pageId, contentId) {
         const pages = document.querySelectorAll(".page");
         pages.forEach(page => {
@@ -125,19 +128,15 @@
                 page.style.display = "none";
             }
         });
-
         document.getElementById("menuDescription").style.display = "none";
-
         currentPage = pageId;
         currentContent = contentId;
-
         if (contentId) {
             window.location.hash = `#${pageId}/${contentId}`;
         } else {
             window.location.hash = `#${pageId}`;
         }
     }
-
 document.getElementById("menuButton1").addEventListener("click", function (event) {
     showPage("page1", "");
 	window.scrollTo(0, -100);
@@ -147,20 +146,16 @@ document.getElementById("menuButton2").addEventListener("click", function (event
     showPage("page2", "");
 	window.scrollTo(0, -100);
 });
-
     function loadContent(content) {
         showPage(currentPage, content);
         const contentContainer = document.getElementById("content");
-
         const schoolingSetumei = contentContainer.querySelector(".schooling-setumei");
         if (schoolingSetumei) {
             schoolingSetumei.style.display = "none";
         }
-
         const iframe = document.createElement("iframe");
         iframe.src = `${content}.html`;
         iframe.onload = adjustIframeHeight;
-
         const existingIframe = contentContainer.querySelector("iframe");
         if (existingIframe) {
             contentContainer.removeChild(existingIframe);
