@@ -11,31 +11,31 @@
     <link rel="stylesheet" type="text/css" href="mainstyle.css">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		color: #ffffff;
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
         }
         .page-size {
-            padding: 0;
+		padding: 0;
         }
         iframe {
-            width: 100%;
-            height: 80vh;
-            border: none;
-			background-color: #393939;
+		width: 100%;
+		height: 120vh;
+		border: none;
+		background-color: #393939;
         }
-		@media (max-width: 320px) {iframe{height: 50vh;}}
-		@media (max-width: 375px) {iframe {height: 60vh;}}
-		@media (max-width: 425px) {iframe {height: 70vh;}}
+		@media (max-width: 320px) {iframe{height: 90vh;}}
+		@media (max-width: 375px) {iframe {height: 100vh;}}
+		@media (max-width: 425px) {iframe {height: 1100vh;}}
 
         .button-size {
-	    border: 1px solid #ddd;
-	    border-radius: 20px;
-            padding: 0 10px;
-            text-align: center;
-            align-items: center;
+		border: 1px solid #ddd;
+		border-radius: 20px;
+		padding: 0 10px;
+		text-align: center;
+		align-items: center;
         }
         #back-to-menu-2 {background-color: #ea4335;}
 	#page2 button,#menuButton2 {background-color: #fbbc05;}
@@ -44,20 +44,23 @@
 	#page1 button:hover {background-color: #009b85;}
     </style>
 	<script>
-	    function adjustIframeHeight() {
-	        const iframe = document.querySelector("iframe");
-	        if (iframe) {
-	            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
-	        }
-	    }
-	    function loadContent(content) {
-	        showPage(currentPage, content);
-	        const iframe = document.getElementById("content").querySelector("iframe");
-	        if (iframe) {
-	            iframe.src = `${content}.html`;
-	            iframe.onload = adjustIframeHeight;
-	        }
-	    }
+		function adjustIframeHeight() {
+			const iframe = document.querySelector("iframe");
+			if (iframe) {
+				if (iframe.dataset.content !== "event-main") {
+					iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+				}
+			}
+		}
+		function loadContent(content) {
+			showPage(currentPage, content);
+			const iframe = document.getElementById("content").querySelector("iframe");
+			if (iframe) {
+				iframe.dataset.content = content;
+				iframe.src = `${content}.html`;
+				iframe.onload = adjustIframeHeight;
+			}
+		}
 	</script>
 </head>
 <body>
@@ -184,10 +187,12 @@ window.onload = function() {
 };
 </script>
 <script>
-	const iframe = document.querySelector("iframe");
-	if (iframe && iframe.src.includes("event-main.html")) {
-		iframe.style.height = "44em";
-	}
+	window.addEventListener('message', function(event) {
+		if (event.data === 'setHeightTo44em') {
+			const iframe = document.querySelector('iframe');
+			iframe.style.height = '44em';
+		}
+	});
 </script>
 </body>
 </html>
