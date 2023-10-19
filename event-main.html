@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="format-detection" content="telephone=no">
-    <title>イベント</title>
-    <!-- 上から Roboto , Zen Maru Gothic , Noto Sans Japanese , english- Poppins -->
+    <title>令和さくら高等学院-メインイベント</title>
 	<style>
 	body {
 		background-color: #202124;
@@ -95,16 +94,11 @@
 		var dropdown = document.querySelector(".zentaikoutei-dropdown-list");
 		var eventDisplay = document.getElementById("zentaikoutei-eventDisplay");
 		var loadDataButton = document.getElementById("zentaikoutei-loadDataButton");
-		var selectedValue = localStorage.getItem('selectedValue'); // ローカルストレージから選択された値を取得
-
-		// ページを再読み込んだ際に、保存された値があればそれをドロップダウンにセットします（なければデフォルトの値）
+		var selectedValue = localStorage.getItem('selectedValue');
 		if (selectedValue) {
 		  dropdown.value = selectedValue;
 		}
-
-		// 以下の関数はタイトルの変更と画像の追加、およびメッセージの表示を行います
 		function updateDisplay(selectedValue) {
-		  // コードスニペット1：タイトルの変更と画像の追加
 		  var dateMap = {
 			"1日目": "【10月31日（火）１日目",
 			"2日目": "【11月1日（水）２日目",
@@ -112,20 +106,15 @@
 			"4日目": "【11月3日（金）４日目"
 		  };
 		  var formattedValue = dateMap[selectedValue];
-
 		  var titleElement = document.getElementById("zentaikoutei-title");
 		  titleElement.innerHTML = formattedValue + "】";
-
 		  var imageElement = document.createElement("img");
 		  imageElement.src = "https://lh3.googleusercontent.com/fife/AK0iWDzJlQY5QnJLpl5yH1EM98Iq8hrvwOfv3Vy2-6rP3uGi3hSqu7KCz7HaWsfJ8ZCAivEbSAUdnSMf1te4kLUfB-AuVw68nG_YurRRXcGXktRTE54ksy-_x5BeP7C9PtgNn3_4hKdzdVbEN4vkY_RmIM9wY-8LIfQqGg7q_gmR5ze6wv34qUVXqtv9w7OOjTlCqG4ZSJp7ZLpXMrqDivMg7HNPvqlowwFfScQBBpeodb_asL-sdnC6YmQRRPAvIg5qlyfGwqBi4uUICo4F2H7aAGMjTWqapVpMSIhLqA66JFbMecW8kWZ-Ww9PaE0b48PX0hkxY1Nmw-g4k4KT1UiZxJ2c2W39HN_NPekoZLhiYKrNpXf5jwqaA7BE6pV9WyCd3sKNvCKAVi1mta4VreuhweEsOGPQpm4LAHU8yt54nxR9kjJiSxrDeu24Me3wiyWG1YS8a_0CEAUjJatcl9cgLx0HWMSYxvD9uOo2eSlIiQuBPx3FmvXZN7EzPWniDwG3QejXpfCvPir1DNI4KC8-DywDoeTr2M6uJ37djvR0I3kWXvE931_RVRhYAa5lavK1jmaG3TOPZQExX6yzOJfSF1Wv7wuX5qhmZ7e4njQXdEPUv6HdntHQ8mU-PpF8R6cQpf2oPeK7Gx1Q4q2ERkDb9O1Y8p4yUwtjATOyJqVEchd6ak19B6qwWCL3zZ0UtUKHM-s4IN_jd4aECUw-KrSsUa75IDtHY2qHXoCoC8xebrpxKsZCUz6_YNq8xHgPxBhtE6smGskSZWAIOYaB-ei7J-zRUDs2aiXBr0tcXpEF6Kg8VMIEFdBdRyrGRqDfqG7xIX3EMkKcljPxaUFZJhA7fYdArHSm8IihP77OiOnvLh4wo5USLpqGZ-q8xKSdDEJ1bCs7tN4og0pDZmQTbw8-ESZ7ZoE6YLauUKIn0AfTPHsw32nbEME11i8VZHZZHAt76wFlYD-EmA4A0dMcLMinC3gDKn3FNgiCZXBCaM3yCiyhuIQ8Z0-JF7yuLg_giv6YlpmV2DgxC24TuSS1ol93v5GkpnofBy4RH8R25WEduTKx5nynF_bn-2vk6b11PeiAkqDYBe8okqOrSQYWMzvq08wxSRAYEAODaM0fjFIi0GV41neNl-dZB1vrSN_uvplkrH8Wx8gy_nghj1iHsN0QrvgYofEhZa0D_DzG05HzQpECD7Yb_JmIl10k9hUcYWZgu1exhIqNO3PfGHf1MwAV61Q4YBqbdV3Xx93dRNDvyJ9cUH6M_rrq58MKuQ9fg1R6hVHhzXJ3EQm7g45CHh1oMA-P2h60NUIHwq2x0pTAEvXIHR8vurM9LEwQn5bCBvX9Ec7mvPkgH_7becJynDi9gCt7xHyq6NKqCjpvlUuOo9kG-AtkIbyVgpucD5xub4hEIsG3EA8zXlY50VekkRc9-2W3bvnxNETpsbCL1Hpd1Bil0A5S2D_wtAdb_mqVaBiYpXhIej2lytdk0bevFTrnnEvvsLnGjGc3robkuodIDI7vMtL1LngGWLuZBLq6hCSOEw5xgSe30EXhWINfX7MWmj4=w2000-h3342"; // 画像のパスを設定
-		  imageElement.alt = "説明のない明蓬館の画像の説明画像"; // 画像の説明を設定
+		  imageElement.alt = "説明のない明蓬館の画像の説明画像";
 		  imageElement.style.maxWidth = "100%";
 		  imageElement.style.height = "auto";
-
-		  titleElement.appendChild(document.createElement("br")); // 改行追加
-		  titleElement.appendChild(imageElement); // 画像追加
-
-		  // コードスニペット2：メッセージの表示
+		  titleElement.appendChild(document.createElement("br"));
+		  titleElement.appendChild(imageElement);
 		  var message = "";
 		  switch (selectedValue) {
 			case "1日目":
@@ -144,22 +133,16 @@
 
 		  document.getElementById("zentaikoutei-title-comment").innerHTML = message;
 		}
-
-		// ページ読み込み時にも処理を実行
 		if (selectedValue) {
-		  updateDisplay(selectedValue); // ドロップダウンの値に基づいて表示を更新
-		  loadData(); // loadData() 関数を実行
+		  updateDisplay(selectedValue);
+		  loadData();
 		}
-
-		// ボタンクリック時の処理
 		loadDataButton.addEventListener("click", function() {
-		  selectedValue = dropdown.value; // ドロップダウンの選択値を取得
-		  localStorage.setItem('selectedValue', selectedValue); // 選択された値をローカルストレージに保存
-		  updateDisplay(selectedValue); // タイトルと画像の表示およびメッセージの表示を更新
-		  loadData(); // loadData() 関数を実行
+		  selectedValue = dropdown.value;
+		  localStorage.setItem('selectedValue', selectedValue);
+		  updateDisplay(selectedValue);
+		  loadData();
 		});
-
-		// 以下は、残りのコード（getColorForYear と loadData 関数）をそのまま使用します
 		function getColorForYear(year) {
 			switch (year) {
 				case "1年生": return "#ff9287";
@@ -188,11 +171,11 @@
 				.then(data => {
 					var matchingData = data.filter(item => item.B === selectedValue);
 					eventDisplay.innerHTML = "";
-						if (matchingData.length > 0) { //メイン処理
+						if (matchingData.length > 0) {
 							matchingData.forEach(function(item) {
 								var displayContent = "";
 								if (item.L === "特別" || item.L === "お知らせ" || item.L === "常時表示") {
-									var divElement = document.createElement("div"); // ここで新しい div 要素を生成
+									var divElement = document.createElement("div");
 									if (item.F !== "") {displayContent += "<h2>" + item.F + "</h2>";}
 									if (item.G !== "") {displayContent += "<p>" + item.G + "<br>";}
 									if (item.H !== "") {displayContent += item.H + "<br>";}
@@ -200,34 +183,27 @@
 									if (item.J !== "") {displayContent += item.J + "</p>";}
 
 									divElement.innerHTML = displayContent;
-									eventDisplay.appendChild(divElement); // div 要素を追加
+									eventDisplay.appendChild(divElement);
 								} else if (item.L === "ok") {
-									// パターン2: "ok"の場合
-									var divElement = document.createElement("div"); // ここで新しい div 要素を生成
-									if (item.C !== "") {displayContent += "<h2>" + item.C + " ";} //7限目
+									var divElement = document.createElement("div");
+									if (item.C !== "") {displayContent += "<h2>" + item.C + " ";}
 									if (item.D !== "") {displayContent += item.D + "～";}
 									if (item.E !== "") {displayContent += item.E + "</h2>";}
-									if (item.F !== "") {displayContent += "<p>" + item.F + " 対象の ";} //全学年
-									if (item.H !== "") {displayContent += item.H + "<br>";}　//HR
+									if (item.F !== "") {displayContent += "<p>" + item.F + " 対象の ";}
+									if (item.H !== "") {displayContent += item.H + "<br>";}
 									if (item.G !== "") {displayContent += "場所：" +　item.G + "";}
 									if (item.I !== "") {displayContent += "<br><span style='color: #ffcf41;'>注意：" + item.I + "</span></p>";}
 									divElement.innerHTML = displayContent;
-									eventDisplay.appendChild(divElement); // div 要素を追加
+									eventDisplay.appendChild(divElement);
 								} else {
-									var timeSlotDiv = document.querySelector(`div[data-timeslot="${item.C}"]`); // 時限目に対応するdivを検索
+									var timeSlotDiv = document.querySelector(`div[data-timeslot="${item.C}"]`);
 
 									if (!timeSlotDiv) {
-										// 新しい時限目のdivを生成
 										timeSlotDiv = document.createElement("div");
-										timeSlotDiv.setAttribute("data-timeslot", item.C); // data-timeslot属性を設定
-
-										// 時限目のヘッダーを設定
+										timeSlotDiv.setAttribute("data-timeslot", item.C);
 										timeSlotDiv.innerHTML = `<h2>${item.C} ${item.D}～${item.E}</h2>`;
-
-										eventDisplay.appendChild(timeSlotDiv); // 時限目のdivを追加
+										eventDisplay.appendChild(timeSlotDiv);
 									}
-
-									// 各授業情報を表示
 									var courseDiv = document.createElement("div");
 									if (item.F !== "") {displayContent += `<h2><span style='color: ${getColorForYear(item.F)}'>${item.F}</span> ${item.H}</h2>`;}
 									if (item.G !== "") {displayContent += "<p>場　所：" + item.G + "<br>";}
@@ -237,18 +213,12 @@
 									if (item.I !== "") {displayContent += "<br><br><span style='color: #ffcf41;'>注意：" + item.I + "</span></p>";}
 									courseDiv.innerHTML = displayContent;
 									timeSlotDiv.appendChild(courseDiv);
-
-									// グループのフッターを生成
 									if (!timeSlotDiv.querySelector(".footer")) {
 										var footerDiv = document.createElement("div");
 										footerDiv.className = "footer";
 										timeSlotDiv.appendChild(footerDiv);
 									}
-
-									// グループのフッターにキーJの値を表示
 									timeSlotDiv.querySelector(".footer").textContent = `対象ではない人の部屋:${item.J}`;
-
-									// フッターをグループ内の一番下に配置
 									timeSlotDiv.appendChild(timeSlotDiv.querySelector(".footer"));
 								}
 							});
@@ -257,10 +227,7 @@
 						}
 					})
 					.catch(error => {
-				  // エラーメッセージを表示するための div 要素を作成
 				  var errorDiv = document.createElement("div");
-				  
-				  // エラーメッセージを判別し、適切なメッセージを設定
 				  if (error.message === "Failed to fetch") {
 					errorDiv.textContent = "ネットワークが不安定です。インターネットの接続を確認してください。";
 				  } else if (error.message === "Network Error") {
@@ -276,19 +243,14 @@
 				  } else if (error.message.includes("CORS policy") || error.message.includes("Cross-Origin Request Blocked")) {
 					errorDiv.textContent = "まさか...このエラーを表示させたアンタ...ハッカー..."; // クロスオリジンリクエストがブロックされました。この操作は許可されていません。
 				  } else {
-					errorDiv.textContent = "想定外のエラーが発生しました: " + error.message +"お手数ですが、再度お試しください。";
+					errorDiv.textContent = "想定外のエラーが発生しました: " + error.message +" お手数ですが、再度お試しください。";
 				  }
-
-				  errorDiv.style.color = "red"; // テキストの色
-				  errorDiv.style.fontWeight = "bold"; // テキストの太さ
-				  errorDiv.style.fontSize = "1.2em"; // テキストのフォントサイズ
-				  errorDiv.style.textAlign = "center"; // テキストの配置
-				  errorDiv.style.marginTop = "20px"; // 上部の余白
-
-				  // 既存の内容をクリア
+				  errorDiv.style.color = "red";
+				  errorDiv.style.fontWeight = "bold";
+				  errorDiv.style.fontSize = "1.2em";
+				  errorDiv.style.textAlign = "center";
+				  errorDiv.style.marginTop = "20px";
 				  eventDisplay.innerHTML = "";
-
-				  // エラーメッセージを zentaikoutei-eventDisplay に追加
 				  eventDisplay.appendChild(errorDiv);
 				});
 			}
