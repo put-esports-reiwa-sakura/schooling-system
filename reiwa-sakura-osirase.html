@@ -1,72 +1,82 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="noindex, nofollow">
-	<meta name="format-detection" content="telephone=no">
-	<title>お知らせ-令和さくら高等学院-令和5年度スクーリング</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
-	<link rel="stylesheet" type="text/css" href="mainstyle.css">
-</head>
-<body>
-	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
-	<div style="margin-top:16px;">
-		<h2>令和5年度スクーリングについて</h2>
-		<p>10月31日(火)～11月3日(金)</p>
-		<div class="menu-button">
-			<button class="button" style="background-color:#4285f4;color:black;">お知らせ</button>
-			<button class="button" id="menu-syosai">詳細</button>
-			<button class="button" id="menu-zenkou">全体行程</button>
-		</div>
-		<div class="menu-button" id="menu-syosai-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
-		</div>
-		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
-		</div>
-		<object>
-			<h1>こちらは当日使用するお知らせページです。</h1>
-<div>
-<h2>航空輸送が禁止されているもの（危険物）</h2>
-<p>法令により、航空輸送が禁止されているもの（危険物）は、機内持ち込みもお預かりもできません。</p>
-<ul>
-	<li>爆発の恐れがあるもの</li>
-	<li>燃えやすいもの</li>
-	<li>人に危害を与えたり、または他の物件を損傷するおそれがあるもの</li>
-</ul>
-<p>以下は危険物に該当するため輸送できません。</p>
-<ul>
-	<li>160Wh を超えるリチウムイオンバッテリーを使用した電子機器（バッテリー単独の輸送もできません）</li>
-	<li>加熱式弁当（発熱材付き弁当）※加熱前・加熱後どちらも不可</li>
-	<li>瞬間冷却材</li>
-</ul>
-<h2>モバイルバッテリーやパソコン</h2>
-<p>リチウム電池、リチウムイオン電池を使用したモバイルバッテリー、電子機器から取り外したバッテリーは発火の危険性があるため、お手荷物としてお預かりできません。機内にお持ち込みください。(ノートパソコンを充電するモバイルバッテリー含む）</p>
-<p>ノートパソコン、タブレットなどのリチウム金属電池・リチウムイオン電池を内蔵した携帯型電子機器は機内持ち込み、お預かりどちらも可能ですが、お預けになる場合は必ず電源をオフにし、ケースや衣類などで梱包するなど保護をしてください。</p>
-<ul>
-	<li>リチウム金属電池はリチウム含有量が2g以下のもの、またはリチウムイオン電池はワット時定格量が 160wh 以下のもの</li>
-</ul>
-</div>
-		</object>
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex, nofollow">
+		<meta name="format-detection" content="telephone=no">
+		<title>お知らせ-令和さくら高等学院-令和5年度スクーリング</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+		<link rel="stylesheet" type="text/css" href="mainstyle.css">
+		<style>
+		.mainosirase {
+			margin: 10px auto;
+			background-color: #444;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			padding: 20px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
+		<div style="margin-top:16px;">
+			<h2>令和5年度スクーリングについて</h2>
+			<p>10月31日(火)～11月3日(金)</p>
+			<div class="menu-button">
+				<button class="button" style="background-color:#4285f4;color:black;">お知らせ</button>
+				<button class="button" id="menu-syosai">詳細</button>
+				<button class="button" id="menu-zenkou">全体行程</button>
+			</div>
+			<div class="menu-button" id="menu-syosai-page" style="display:none;">
+				<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+				<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+				<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+			</div>
+			<div class="menu-button" id="menu-zenkou-page" style="display:none;">
+				<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+				<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+				<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
+			</div>
+			<object>
+				<h1>こちらは当日使用するお知らせページです。</h1>
+	<div class="mainosirase">
+	<h1 style="text-align:center;font-size:2.3em;color:#ffafaf;">重要なお知らせ</h1>
+	<h1>航空輸送が禁止されているもの（危険物）</h1>
+	<p>法令により、航空輸送が禁止されているもの（危険物）は、機内持ち込みもお預かりもできません。</p>
+	<ul>
+		<li>爆発の恐れがあるもの</li>
+		<li>燃えやすいもの</li>
+		<li>人に危害を与えたり、または他の物件を損傷するおそれがあるもの</li>
+	</ul>
+	<p>以下は危険物に該当するため輸送できません。</p>
+	<ul>
+		<li>160Wh を超えるリチウムイオンバッテリーを使用した電子機器（バッテリー単独の輸送もできません）</li>
+		<li>加熱式弁当（発熱材付き弁当）※加熱前・加熱後どちらも不可</li>
+		<li>瞬間冷却材</li>
+	</ul>
+	<h1>モバイルバッテリーやパソコン</h1>
+	<p>リチウム電池、リチウムイオン電池を使用したモバイルバッテリー、電子機器から取り外したバッテリーは発火の危険性があるため、お手荷物としてお預かりできません。機内にお持ち込みください。(ノートパソコンを充電するモバイルバッテリー含む）</p>
+	<p>ノートパソコン、タブレットなどのリチウム金属電池・リチウムイオン電池を内蔵した携帯型電子機器は機内持ち込み、お預かりどちらも可能ですが、お預けになる場合は必ず電源をオフにし、ケースや衣類などで梱包するなど保護をしてください。</p>
+	<ul>
+		<li>リチウム金属電池はリチウム含有量が2g以下のもの、またはリチウムイオン電池はワット時定格量が 160wh 以下のもの</li>
+	</ul>
 	</div>
-	<script>
-	document.getElementById('menu-syosai').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'block';
-		document.getElementById('menu-zenkou-page').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
-		document.getElementById('menu-zenkou').style.backgroundColor = '';
-	});
-	document.getElementById('menu-zenkou').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'none';
-		document.getElementById('menu-zenkou-page').style.display = 'block';
-		document.getElementById('menu-syosai').style.backgroundColor = '';
-		document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
-	});
-	</script>
-</body>
-</html>
+			</object>
+		</div>
+		<script>
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
+			document.getElementById('menu-zenkou').style.backgroundColor = '';
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').style.backgroundColor = '';
+			document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
+		});
+		</script>
+	</body>
+	</html>
