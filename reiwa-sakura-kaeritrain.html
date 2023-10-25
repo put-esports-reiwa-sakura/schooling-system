@@ -12,89 +12,28 @@
 <body>
 	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
 	<div style="margin-top:16px;">
-		<h2 onclick="location.href = '/schooling-system/index.html'">令和5年度スクーリングについて</h2>
+		<h2 onclick="location.href = '/schooling-system/index'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
 		<p>10月31日(火)～11月3日(金)</p>
 		<div class="menu-button">
-			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase'">お知らせ</button>
 			<button class="button" id="menu-syosai">詳細</button>
 			<button class="button" id="menu-zenkou" style="background-color: #d7996d;">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru'">説明とﾙｰﾙ</button>
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:block;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain'">行き電車</button>
 			<button class="button" style="background-color:#4285f4;color:black;">帰り電車</button>
 		</div>
 		<object>
 			<!DOCTYPE html>
 			<html>
-			<head>
-				<style>
-					body {
-						color: #FFFFFF;
-						font-family: Arial, sans-serif;
-						margin: 0;
-						padding: 0;
-					}
-					.titlemozi {
-						position: sticky;
-						text-align: center;
-						top: 0%;
-						z-index: 999;
-						background-color: rgb(51 51 51 / 50%);
-					}
-					.titlemozi h1{padding: 0;}
-					.container {
-						max-width: 100%;
-						padding: 20px;
-					}
-					.results {
-						background-color: #1e1e1e;
-						padding: 20px;
-						list-style: none;
-					}
-					.train {
-						display: flex;
-						align-items: center;
-						border-radius: 5px;
-						border: 1px solid #333;
-						background-color: #313131;
-					}
-					.train-time {
-						text-align: center;
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						margin: 0 20px;
-						padding: 5px;
-					}
-					.train-time::before {
-						content: '';
-						border-left: 1px solid #666;
-						height: 100%;
-						position: absolute;
-						left: -10px;
-					}
-					.station-name {
-						font-weight: bold;
-						flex-grow: 1;
-						text-align: left;
-						padding: 5px;
-					}
-					.travel-time {
-						width: 85px;
-						padding: 10px;
-						border-right: 6px solid #02ff00;
-						text-align: center;
-					}
-				</style>
-			</head>
 			<body>
-				<div class="container">
+				<div class="iki-container">
 					<div>
 					<div class="titlemozi"><h1>帰り電車 時刻表</h1>
 					<p>名鉄空港線 中部国際空港(鉄道)発→新可児行き停車駅一覧</p></div>
