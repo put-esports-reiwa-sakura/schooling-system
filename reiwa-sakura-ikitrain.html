@@ -12,181 +12,120 @@
 <body>
 	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
 	<div style="margin-top:16px;">
-		<h2 onclick="location.href = '/schooling-system/index.html'">令和5年度スクーリングについて</h2>
+		<h2 onclick="location.href = '/schooling-system/index'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
 		<p>10月31日(火)～11月3日(金)</p>
 		<div class="menu-button">
-			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase'">お知らせ</button>
 			<button class="button" id="menu-syosai">詳細</button>
 			<button class="button" id="menu-zenkou" style="background-color: #d7996d;">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru'">説明とﾙｰﾙ</button>
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:block;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime'">1～4日目</button>
 			<button class="button" style="background-color:#4285f4;color:black;">行き電車</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain'">帰り電車</button>
 		</div>
 		<object>
 			<!DOCTYPE html>
 			<html>
-			<head>
-				<style>
-					body {
-						color: #FFFFFF;
-						font-family: Arial, sans-serif;
-						margin: 0;
-						padding: 0;
-					}
-					.titlemozi {
-						position: sticky;
-						text-align: center;
-						top: 0%;
-						z-index: 999;
-						background-color: rgb(51 51 51 / 50%);
-					}
-					.titlemozi h1{padding: 0;}
-					.container {
-						max-width: 100%;
-						padding: 20px;
-					}
-					.results {
-						background-color: #1e1e1e;
-						padding: 20px;
-						list-style: none;
-					}
-					.train {
-						display: flex;
-						align-items: center;
-						border-radius: 5px;
-						border: 1px solid #333;
-						background-color: #313131;
-					}
-					.train-time {
-						text-align: center;
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-						margin: 0 20px;
-						padding: 5px;
-					}
-					.train-time::before {
-						content: '';
-						border-left: 1px solid #666;
-						height: 100%;
-						position: absolute;
-						left: -10px;
-					}
-					.station-name {
-						font-weight: bold;
-						flex-grow: 1;
-						text-align: left;
-						padding: 5px;
-					}
-					.travel-time {
-						width: 85px;
-						padding: 10px;
-						border-right: 6px solid #02ff00;
-						text-align: center;
-					}
-				</style>
-			</head>
 			<body>
-				<div class="container">
-					<div>
-					<div class="titlemozi"><h1>行き電車 時刻表</h1>
-					<p>名鉄広見線ミュースカイ 新可児発→中部国際空港(鉄道)行き 停車駅一覧</p></div>
-						<ul class="results">
-							<li class="train">
-								<div class="train-time">
-									<span>7:00 発</span>
-								</div>
-								<div class="station-name">新可児</div>
-							</li>
-							<div class="travel-time">3分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:03 着</span>
-									<span>7:04 発</span>
-								</div>
-								<div class="station-name">日本ライン今渡</div>
-							</li>
-							<div class="travel-time">2分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:06 着</span>
-									<span>7:07 発</span>
-								</div>
-								<div class="station-name">可児川</div>
-							</li>
-							<div class="travel-time">2分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:09 着</span>
-									<span>7:10 発</span>
-								</div>
-								<div class="station-name">西可児</div>
-							</li>
-							<div class="travel-time">10分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:20 着</span>
-									<span>7:24 発</span>
-								</div>
-								<div class="station-name">犬山</div>
-							</li>
-							<div class="travel-time">7分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:31 着</span>
-									<span>7:32 発</span>
-								</div>
-								<div class="station-name">江南(愛知県)</div>
-							</li>
-							<div class="travel-time">5分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:37 着</span>
-									<span>7:38 発</span>
-								</div>
-								<div class="station-name">岩倉(愛知県)</div>
-							</li>
-							<div class="travel-time">13分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:51 着</span>
-									<span>7:51 発</span>
-								</div>
-								<div class="station-name">名鉄名古屋</div>
-							</li>
-							<div class="travel-time">4分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:55 着</span>
-									<span>7:56 発</span>
-								</div>
-								<div class="station-name">金山(愛知県)</div>
-							</li>
-							<div class="travel-time">2分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>7:58 着</span>
-									<span>7:59 発</span>
-								</div>
-								<div class="station-name">神宮前</div>
-							</li>
-							<div class="travel-time">26分</div>
-							<li class="train">
-								<div class="train-time">
-									<span>8:25 発</span>
-								</div>
-								<div class="station-name">中部国際空港(鉄道)</div>
-							</li>
-						<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
-						</ul>
+				<div class="iki-container">
+					<div class="titlemozi">
+						<h1>行き電車 時刻表</h1>
+						<p>名鉄広見線ミュースカイ 新可児発→中部国際空港(鉄道)行き 停車駅一覧</p>
 					</div>
+					<ul class="results">
+						<li class="train">
+							<div class="train-time">
+								<span>7:00 発</span>
+							</div>
+							<div class="station-name">新可児</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:03 着</span>
+								<span>7:04 発</span>
+							</div>
+							<div class="station-name">日本ライン今渡</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:06 着</span>
+								<span>7:07 発</span>
+							</div>
+							<div class="station-name">可児川</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:09 着</span>
+								<span>7:10 発</span>
+							</div>
+							<div class="station-name">西可児</div>
+						</li>
+						<div class="travel-time">10分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:20 着</span>
+								<span>7:24 発</span>
+							</div>
+							<div class="station-name">犬山</div>
+						</li>
+						<div class="travel-time">7分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:31 着</span>
+								<span>7:32 発</span>
+							</div>
+							<div class="station-name">江南(愛知県)</div>
+						</li>
+						<div class="travel-time">5分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:37 着</span>
+								<span>7:38 発</span>
+							</div>
+							<div class="station-name">岩倉(愛知県)</div>
+						</li>
+						<div class="travel-time">13分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:51 着</span>
+								<span>7:51 発</span>
+							</div>
+							<div class="station-name">名鉄名古屋</div>
+						</li>
+						<div class="travel-time">4分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:55 着</span>
+								<span>7:56 発</span>
+							</div>
+							<div class="station-name">金山(愛知県)</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>7:58 着</span>
+								<span>7:59 発</span>
+							</div>
+							<div class="station-name">神宮前</div>
+						</li>
+						<div class="travel-time">26分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>8:25 発</span>
+							</div>
+							<div class="station-name">中部国際空港(鉄道)</div>
+						</li>
+					<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
+					</ul>
 				</div>
 				<script>
 					const googleBlueStations = ['日本ライン今渡'];
