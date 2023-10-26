@@ -1,4 +1,12 @@
 /* 共通 */
+.gr{color: #ea4335;}
+.gb{color: #4285f4;}
+.gg{color: #34a853;}
+.gy{color: #fbbc05;}
+.bab{background-color: #4285F4;}
+.bag{background-color: #0F9D58;}
+.bao{background-color: #FF5722;}
+.bada{background-color: #777;}
 body {
 	font-family: 'Zen Maru Gothic', sans-serif;
 	background-color: #333;
@@ -25,6 +33,34 @@ button {
 	padding: 0px 10px;
 	display: inline-block;
 	border-radius: 20px;
+}
+.dropdown-list {
+	font-size: 30px;
+	padding: 8px;
+	border: 2px solid #4285f4;
+	background-color: #202124;
+	color: #ffffff;
+	border-radius: 8px;
+	height: 2.4em;
+}
+.dropdown-list select:focus {
+	outline: none;
+	border: 1px solid #4285f4;
+	box-shadow: 0 0 5px #4285f4;
+}
+.menu-button-sentaku {
+	background-color: #d7996d;
+}
+.menu-inner-sentaku {
+	background-color:#4285f4;
+	color:black;
+}
+.main-error-display {
+	color: #ff9090;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top: 20px;
 }
 /* メイン */
 .menu-copyright {
@@ -117,20 +153,6 @@ button {
 	margin-left: 0px;
 	font-size: 1.3em;
 }
-.osirase-nimotu select {
-	background-color: #f1f164d4;
-	border: 1px solid #ffffff;
-	border-radius: 5px;
-	padding: 2px 4px;
-	font-size: 20px;
-	width: 175px;
-	height: 46px;
-}
-.osirase-nimotu select:focus {
-	outline: none;
-	border: 1px solid #4285f4;
-	box-shadow: 0 0 5px #4285f4;
-}
 .osirase-nimotu .osirase-nimotu-hontai .osirase-nimotu-stack {
 	position: sticky;
 	top: 0;
@@ -222,25 +244,6 @@ button {
 	text-align: center;
 	align-items: center;
 }
-.zentaikoutei-dropdown-list {
-	flex: 1;
-	font-size: 16px;
-	padding: 8px;
-	border: 2px solid #4285f4;
-	background-color: #202124;
-	color: #ffffff;
-	border-radius: 8px;
-}
-.zentaikoutei-custom-button {
-	font-size: 16px;
-	padding: 15px 30px;
-	background-color: #4285f4;
-	color: #ffffff;
-	border: none;
-	border-radius: 8px;
-	cursor: pointer;
-	margin-top: 10px;
-}
 .zentaikoutei-content div {
 	max-width: 90%;
 	margin: 10px auto;
@@ -256,6 +259,10 @@ button {
 	top: 12.4%;
 	background-color: rgba(68, 68, 68, 0.5);
 }
+.zentaikoutei-1st-year{color: #ff9287;}
+.zentaikoutei-2nd-year{color: #ffe08c;}
+.zentaikoutei-3rd-year{color: #6da5ff;}
+.zentaikoutei-targeted{color: #a8fcb7;}
 /* せつめーるーる */
 .setumei-body {
 	margin: 0;
@@ -276,6 +283,7 @@ button {
 	padding: 20px;
 }
 .osirase-content .started {color: lime;}
+.osirase-content .ended {color: orange;}
 .osirase-sousapanel {
 	background-color: rgb(121 121 121 / 0.9);
 	padding: 2px;
@@ -295,6 +303,10 @@ button {
 	cursor: pointer;
 }
 .osirase-sousapanel #toggleButton {display: none;}
+.osirase-tili2 {color:rgb(255, 179, 0);}
+.osirase-tili1 {color:rgb(255, 0, 0);}
+.osirase-mario-on {background-color: #13af13;}
+.osirase-mario-off {background-color: #d9c242;}
 @media (min-width: 768px) {
 	/* PC用スタイル */
 	body {
@@ -315,6 +327,9 @@ button {
 		margin: 5px;
 		padding: 10px 10px;
 		font-size: 20px;
+	}
+	.dropdown-list {
+		font-size: 21px;
 	}
 	h1{font-size:1.5em;margin: 0em;}
 	h2{font-size:1.17em;margin: 0em;}
@@ -338,11 +353,6 @@ button {
 	/* べんきょのにもつ */
 	.osirase-nimotu .osirase-nimotu-hontai ul {
 		max-width: 600px;
-	}
-	.osirase-nimotu select {
-		padding: 1px 2px;
-		font-size: 28px;
-		width: 125px;
 	}
 	/* めいんにもつ */
 	.nimotu-container {
