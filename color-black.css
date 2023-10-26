@@ -1,0 +1,110 @@
+/* ©2023 REIWA SAKURA KOUTOU GAKUIN */
+/* ©2023 令和さくら高等学院 */
+/* Access to https://www.reiwa-sakura.net/ */
+/* がくいんちょう: のだ (teacher) */
+/* Main Programmer: Aoyama */
+/* Check: Akita (teacher),hutamura (teacher), hashimoto */
+/* Thank you to everyone who helped us. */
+/* 共通 */
+.gr{color: #ea4335;}
+.gb{color: #4285f4;}
+.gg{color: #34a853;}
+.gy{color: #fbbc05;}
+.bab{background-color: #4285F4;}
+.bag{background-color: #0F9D58;}
+.bao{background-color: #FF5722;}
+.bada{background-color: #777;}
+body {
+	background-color: #333;
+	color: white;
+}
+button {
+	background-color: #a3a3a3;
+	color: #fff;
+}
+.menu-linkbutton {
+	border: 2px solid #000000;
+	background-color: #5b5b5b;
+}
+.dropdown-list {
+	border: 2px solid #4285f4;
+	background-color: #202124;
+	color: #ffffff;
+}
+.dropdown-list select:focus {
+	border: 1px solid #4285f4;
+	box-shadow: 0 0 5px #4285f4;
+}
+.menu-button-sentaku {background-color: #d7996d;}
+.menu-inner-sentaku {
+	background-color:#4285f4;
+	color:black;
+}
+.main-error-display {color: #ff9090;}
+/* メイン */
+.menu-copyright {color: #C0C0C0;}
+.menu-button {border: 1px solid #ddd;}
+/* でんしゃ */
+.iki-container {color: #FFFFFF;}
+.iki-container .titlemozi {background-color: rgba(51, 51, 51, 0.5);}
+.iki-container .results {background-color: #1e1e1e;}
+.iki-container .results .train {
+	border: 1px solid #333;
+	background-color: #313131;
+}
+.iki-container .results .train .train-time::before {border-left: 1px solid #666;}
+.iki-container .results .travel-time {border-right: 6px solid #02ff00;}
+/* べんきょのにもつ */
+.osirase-nimotu .osirase-nimotu-hontai ul .osirase-nimotu-nakami1 {color: burlywood;}
+.osirase-nimotu .osirase-nimotu-hontai ul .osirase-nimotu-nakami2 {color: aquamarine;}
+.osirase-nimotu .osirase-nimotu-hontai ul {
+	background-color: #444;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.osirase-nimotu .osirase-nimotu-hontai .osirase-nimotu-stack {background-color: rgba(51, 51, 51, 0.5);}
+/* めいんにもつ */
+.nimotu-container {
+	color: #fff;
+	background-color: #444;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+	.nimotu-container {border: 1px solid #ddd;}
+}
+.nimotu-titleh1 {color: #f4b742;}
+.nimotu-color-red {color: #ff7676;}
+.nimotu-item-title {color: #ffb300;}
+.nimotu-item-description {color: #9ee3b0;}
+.nimotu-item-box label {border: 2px solid #ddd;}
+.nimotu-item-box input[type="checkbox"]:checked + label {background-color: #a5bde3;}
+/* ぜんたいこーてー */
+.zentaikoutei #zentaikoutei-title {background-color: rgba(51, 51, 51, 0.5);}
+.zentaikoutei #zentaikoutei-title-comment {
+	background-color: #444;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.zentaikoutei-content div {
+	background-color: #444;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.zentaikoutei-content div[data-timeslot] div {background-color: dimgray;}
+.zentaikoutei-content div[data-timeslot] h2 {background-color: rgba(68, 68, 68, 0.5);}
+.zentaikoutei-1st-year{color: #ff9287;}
+.zentaikoutei-2nd-year{color: #ffe08c;}
+.zentaikoutei-3rd-year{color: #6da5ff;}
+.zentaikoutei-targeted{color: #a8fcb7;}
+/* せつめーるーる */
+/* おしらせ */
+.osirase-content div {
+	background-color: #444;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.osirase-content .started {color: lime;}
+.osirase-content .ended {color: orange;}
+.osirase-sousapanel {background-color: rgb(121 121 121 / 0.9);}
+.osirase-sousapanel #toggleContainer,.osirase-saiyomikomi {border: 2px solid #000;}
+.osirase-tili2 {color:rgb(255, 179, 0);}
+.osirase-tili1 {color:rgb(255, 0, 0);}
+.osirase-mario-on {background-color: #13af13;}
+.osirase-mario-off {background-color: #d9c242;}
