@@ -24,7 +24,7 @@
 		<div class="menu-button">
 			<button class="button" onclick="location.href = 'reiwa-sakura-osirase'">お知らせ</button>
 			<button class="button" id="menu-syosai">詳細</button>
-			<button class="button" id="menu-zenkou" style="background-color: #d7996d;">全体行程</button>
+			<button class="button menu-button-sentaku" id="menu-zenkou">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:none;">
 			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
@@ -33,140 +33,135 @@
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:block;">
 			<button class="button" onclick="location.href = 'reiwa-sakura-nitime'">1～4日目</button>
-			<button class="button" style="background-color:#4285f4;color:black;">行き電車</button>
+			<button class="button menu-inner-sentaku">行き電車</button>
 			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain'">帰り電車</button>
 		</div>
-		<object>
-			<!DOCTYPE html>
-			<html>
-			<body>
-				<div class="iki-container">
-					<div class="titlemozi">
-						<h1>行き電車 時刻表</h1>
-						<p>名鉄広見線ミュースカイ 新可児発→中部国際空港(鉄道)行き 停車駅一覧</p>
-					</div>
-					<ul class="results">
-						<li class="train">
-							<div class="train-time">
-								<span>7:00 発</span>
-							</div>
-							<div class="station-name">新可児</div>
-						</li>
-						<div class="travel-time">3分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:03 着</span>
-								<span>7:04 発</span>
-							</div>
-							<div class="station-name">日本ライン今渡</div>
-						</li>
-						<div class="travel-time">2分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:06 着</span>
-								<span>7:07 発</span>
-							</div>
-							<div class="station-name">可児川</div>
-						</li>
-						<div class="travel-time">2分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:09 着</span>
-								<span>7:10 発</span>
-							</div>
-							<div class="station-name">西可児</div>
-						</li>
-						<div class="travel-time">10分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:20 着</span>
-								<span>7:24 発</span>
-							</div>
-							<div class="station-name">犬山</div>
-						</li>
-						<div class="travel-time">7分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:31 着</span>
-								<span>7:32 発</span>
-							</div>
-							<div class="station-name">江南(愛知県)</div>
-						</li>
-						<div class="travel-time">5分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:37 着</span>
-								<span>7:38 発</span>
-							</div>
-							<div class="station-name">岩倉(愛知県)</div>
-						</li>
-						<div class="travel-time">13分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:51 着</span>
-								<span>7:51 発</span>
-							</div>
-							<div class="station-name">名鉄名古屋</div>
-						</li>
-						<div class="travel-time">4分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:55 着</span>
-								<span>7:56 発</span>
-							</div>
-							<div class="station-name">金山(愛知県)</div>
-						</li>
-						<div class="travel-time">2分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>7:58 着</span>
-								<span>7:59 発</span>
-							</div>
-							<div class="station-name">神宮前</div>
-						</li>
-						<div class="travel-time">26分</div>
-						<li class="train">
-							<div class="train-time">
-								<span>8:25 発</span>
-							</div>
-							<div class="station-name">中部国際空港(鉄道)</div>
-						</li>
-					<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
-					</ul>
+		<div class="reiwa-sakura-main-content">
+			<div class="iki-container">
+				<div class="titlemozi">
+					<h1>行き電車 時刻表</h1>
+					<p>名鉄広見線ミュースカイ 新可児発→中部国際空港(鉄道)行き 停車駅一覧</p>
 				</div>
-				<script>
-					const googleBlueStations = ['日本ライン今渡'];
-					const googleGreenStations = ['犬山'];
-					const googleOrangeStations = ['中部国際空港(鉄道)'];
-					const trainStations = document.querySelectorAll('.train');
-					trainStations.forEach(train => {
-					const stationName = train.querySelector('.station-name').textContent.trim();
-						if (googleBlueStations.includes(stationName)) {
-							train.style.backgroundColor = '#4285F4';
-						} else if (googleGreenStations.includes(stationName)) {
-							train.style.backgroundColor = '#0F9D58';
-						} else if (googleOrangeStations.includes(stationName)) {
-							train.style.backgroundColor = '#FF5722';
-						}
-					});
-				</script>
-			</body>
-			</html>
-		</object>
+				<ul class="results">
+					<li class="train">
+						<div class="train-time">
+							<span>7:00 発</span>
+						</div>
+						<div class="station-name">新可児</div>
+					</li>
+					<div class="travel-time">3分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:03 着</span>
+							<span>7:04 発</span>
+						</div>
+						<div class="station-name">日本ライン今渡</div>
+					</li>
+					<div class="travel-time">2分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:06 着</span>
+							<span>7:07 発</span>
+						</div>
+						<div class="station-name">可児川</div>
+					</li>
+					<div class="travel-time">2分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:09 着</span>
+							<span>7:10 発</span>
+						</div>
+						<div class="station-name">西可児</div>
+					</li>
+					<div class="travel-time">10分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:20 着</span>
+							<span>7:24 発</span>
+						</div>
+						<div class="station-name">犬山</div>
+					</li>
+					<div class="travel-time">7分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:31 着</span>
+							<span>7:32 発</span>
+						</div>
+						<div class="station-name">江南(愛知県)</div>
+					</li>
+					<div class="travel-time">5分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:37 着</span>
+							<span>7:38 発</span>
+						</div>
+						<div class="station-name">岩倉(愛知県)</div>
+					</li>
+					<div class="travel-time">13分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:51 着</span>
+							<span>7:51 発</span>
+						</div>
+						<div class="station-name">名鉄名古屋</div>
+					</li>
+					<div class="travel-time">4分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:55 着</span>
+							<span>7:56 発</span>
+						</div>
+						<div class="station-name">金山(愛知県)</div>
+					</li>
+					<div class="travel-time">2分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>7:58 着</span>
+							<span>7:59 発</span>
+						</div>
+						<div class="station-name">神宮前</div>
+					</li>
+					<div class="travel-time">26分</div>
+					<li class="train">
+						<div class="train-time">
+							<span>8:25 発</span>
+						</div>
+						<div class="station-name">中部国際空港(鉄道)</div>
+					</li>
+				<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
+				</ul>
+			</div>
+			<script>
+				const googleBlueStations = ['日本ライン今渡'];
+				const googleGreenStations = ['犬山'];
+				const googleOrangeStations = ['中部国際空港(鉄道)'];
+				const trainStations = document.querySelectorAll('.train');
+				trainStations.forEach(train => {
+				const stationName = train.querySelector('.station-name').textContent.trim();
+					if (googleBlueStations.includes(stationName)) {
+						train.style.backgroundColor = '#4285F4';
+					} else if (googleGreenStations.includes(stationName)) {
+						train.style.backgroundColor = '#0F9D58';
+					} else if (googleOrangeStations.includes(stationName)) {
+						train.style.backgroundColor = '#FF5722';
+					}
+				});
+			</script>
+		</div>
 	</div>
 	<script>
-	document.getElementById('menu-syosai').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'block';
-		document.getElementById('menu-zenkou-page').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
-		document.getElementById('menu-zenkou').style.backgroundColor = '';
-	});
-	document.getElementById('menu-zenkou').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'none';
-		document.getElementById('menu-zenkou-page').style.display = 'block';
-		document.getElementById('menu-syosai').style.backgroundColor = '';
-		document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
-	});
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
 	</script>
 </body>
 </html>
