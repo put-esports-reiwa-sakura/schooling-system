@@ -37,25 +37,25 @@
 			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
 			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
 		</div>
-		<object>
+		<div class="reiwa-sakura-main-content">
 		<h1>各ページにつながるボタンは上にあります。</h1>
-		<p>サイトが完成しました。</p>
-		</object>
+		<p>お知らせに詳しいお知らせがあります。</p>
+		</div>
 	</div>
 	<script>
 	document.getElementById('menu-syosai').addEventListener('click', function () {
 		document.getElementById('menu-syosai-page').style.display = 'block';
 		document.getElementById('menu-zenkou-page').style.display = 'none';
 		document.getElementById('menu-setumei').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
-		document.getElementById('menu-zenkou').style.backgroundColor = '';
+		document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+		document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
 	});
 	document.getElementById('menu-zenkou').addEventListener('click', function () {
 		document.getElementById('menu-syosai-page').style.display = 'none';
 		document.getElementById('menu-zenkou-page').style.display = 'block';
 		document.getElementById('menu-setumei').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '';
-		document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
+		document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+		document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
 	});
 	</script>
 </body>
