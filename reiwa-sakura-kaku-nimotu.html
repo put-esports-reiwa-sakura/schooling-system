@@ -23,12 +23,12 @@
 		<p>10月31日(火)～11月3日(金)</p>
 		<div class="menu-button">
 			<button class="button" onclick="location.href = 'reiwa-sakura-osirase'">お知らせ</button>
-			<button class="button" id="menu-syosai" style="background-color: #d7996d;">詳細</button>
+			<button class="button menu-button-sentaku" id="menu-syosai">詳細</button>
 			<button class="button" id="menu-zenkou">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:block;">
 			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
-			<button class="button" style="background-color:#4285f4;color:black;">各教科の荷物</button>
+			<button class="button menu-inner-sentaku">各教科の荷物</button>
 			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru'">説明とﾙｰﾙ</button>
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
@@ -36,112 +36,107 @@
 			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain'">行き電車</button>
 			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain'">帰り電車</button>
 		</div>
-		<object>
-			<!DOCTYPE html>
-			<html>
-			<head>
-				<script>
-					var osiraseNimotu_url = "https://raw.githubusercontent.com/put-esports-reiwa-sakura/schooling-system/main/spreadsheetdata.json";
-					var osiraseNimotu_selectedYear = "";
-					window.onload = function() {
-						var savedYear = localStorage.getItem("osirase-nimotu-selectedYear");
-						if (savedYear) {
-							document.getElementById("osirase-nimotu-yearSelect").value = savedYear;
-							osiraseNimotu_selectedYear = savedYear;
-						}
-					osiraseNimotu_updateData();
-					};
-					function osiraseNimotu_updateData() {
-						var resultDiv = document.getElementById("osirase-nimotu-result");
-						var loadingDiv = document.getElementById("osirase-nimotu-loading");
-						var yearSelect = document.getElementById("osirase-nimotu-yearSelect");
-						var resultHTML = "";
-						var title = "";
-						osiraseNimotu_selectedYear = yearSelect.value;
-						localStorage.setItem("osirase-nimotu-selectedYear", osiraseNimotu_selectedYear);
-						resultDiv.style.display = "none";
-						if (osiraseNimotu_selectedYear === "") {
-							resultDiv.innerHTML = "学年を選択して、右側の[変更]を押してください。";
-							loadingDiv.innerHTML = "学年を選択して、右側の[変更]を押してください。";
-							loadingDiv.style.display = "block";
-							title = "持ち物";
-					} else {
-						var searchKeyword = osiraseNimotu_selectedYear;
-						title = osiraseNimotu_selectedYear + "</span>　それぞれの<br>教科で必要な持ち物";
-						loadingDiv.innerHTML = "<h1>読み込み中...</h1>";
-						loadingDiv.style.display = "block";
-						var timeout = setTimeout(function() {
-							loadingDiv.innerHTML = "インターネットの接続が悪いようです。";
-						}, 3000);
-						fetch(osiraseNimotu_url)
-							.then(response => {
-						if (!response.ok) {
-							throw new Error("サーバーエラーが発生しました。");
-						}
-						return response.json();
-							})
-						.then(data => {
-							clearTimeout(timeout);
-							data.forEach(function(item) {
-								if (item.F === searchKeyword) {
-									resultHTML += `<li class="osirase-nimotu-nakami1">${item.B}の${item.C}、${item.H}</li><li class="osirase-nimotu-nakami2">${item.P}</li><br>`;
-								}
-							});
-								loadingDiv.style.display = "none";
-								resultDiv.style.display = "block";
-								resultDiv.innerHTML = `<div class="osirase-nimotu-stack"><h1><span style="color: #ea4335;">${title}</h1></div><ul>${resultHTML}</ul>`;
-							})
-							.catch(error => {
-								clearTimeout(timeout);
-								loadingDiv.innerHTML = error.message;
-								if (error.message === "サーバーエラーが発生しました。") {
-									loadingDiv.innerHTML = "サーバーエラーが発生しました。";
-								} else if (error.message === "インターネットの接続が悪いようです。") {
-									loadingDiv.innerHTML = "インターネットの接続が悪いようです。インターネットの接続状況を確認して変更ボタンを押してみてください。";
-								} else if (error.message === "ご迷惑をおかけします。クロスドメインエラーのようです。サーバー側の一時的な問題なのでお手数おかけしますが後でもう一度試してみてください。") {
-									loadingDiv.innerHTML = "ご迷惑をおかけします。クロスドメイン制約によりデータを取得できません。サーバー側の一時的な問題なのでお手数おかけしますが後でもう一度試してみてください。";
-								} else {
-									loadingDiv.innerHTML = "エラーが発生しました。インターネットの接続状態を確認して変更ボタンを押してみてください。";
-								}
-							});
-						}
+		<div class="reiwa-sakura-main-content">
+			<script>
+				var osiraseNimotu_url = "https://raw.githubusercontent.com/put-esports-reiwa-sakura/schooling-system/main/spreadsheetdata.json";
+				var osiraseNimotu_selectedYear = "";
+				window.onload = function() {
+					var savedYear = localStorage.getItem("osirase-nimotu-selectedYear");
+					if (savedYear) {
+						document.getElementById("osirase-nimotu-yearSelect").value = savedYear;
+						osiraseNimotu_selectedYear = savedYear;
 					}
-				</script>
-			</head>
-			<body>
-				<div class="osirase-nimotu">
-					<div class="osirase-nimotu-custom page-main">
-					<h1>各教科の必要な荷物</h1>
-					<label for="osirase-nimotu-yearSelect">学年を選択:</label>
-						<select id="osirase-nimotu-yearSelect">
-							<option value="">学年の選択</option>
-							<option value="1年生">1年生</option>
-							<option value="2年生">2年生</option>
-							<option value="3年生">3年生</option>
-							<option value="対象のみ">一部対象者のみ</option>
-						</select>
-						<button id="osirase-nimotu-changeButton" onclick="osiraseNimotu_updateData()">変更</button>
-					</div>
-				<div id="osirase-nimotu-loading" style="display: none;"></div>
-				<div id="osirase-nimotu-result" class="osirase-nimotu-hontai"></div>
+				osiraseNimotu_updateData();
+				};
+				function osiraseNimotu_updateData() {
+					var resultDiv = document.getElementById("osirase-nimotu-result");
+					var loadingDiv = document.getElementById("osirase-nimotu-loading");
+					var yearSelect = document.getElementById("osirase-nimotu-yearSelect");
+					var resultHTML = "";
+					var title = "";
+					osiraseNimotu_selectedYear = yearSelect.value;
+					localStorage.setItem("osirase-nimotu-selectedYear", osiraseNimotu_selectedYear);
+					resultDiv.style.display = "none";
+					if (osiraseNimotu_selectedYear === "") {
+						resultDiv.innerHTML = "学年を選択して、右側の[変更]を押してください。";
+						loadingDiv.innerHTML = "学年を選択して、右側の[変更]を押してください。";
+						loadingDiv.style.display = "block";
+						title = "持ち物";
+				} else {
+					var searchKeyword = osiraseNimotu_selectedYear;
+					title = osiraseNimotu_selectedYear + "</span>　それぞれの<br>教科で必要な持ち物";
+					loadingDiv.innerHTML = "<h1>読み込み中...</h1>";
+					loadingDiv.style.display = "block";
+					var timeout = setTimeout(function() {
+						loadingDiv.innerHTML = "インターネットの接続が悪いようです。";
+					}, 3000);
+					fetch(osiraseNimotu_url)
+						.then(response => {
+					if (!response.ok) {
+						throw new Error("サーバーエラーが発生しました。");
+					}
+					return response.json();
+						})
+					.then(data => {
+						clearTimeout(timeout);
+						data.forEach(function(item) {
+							if (item.F === searchKeyword) {
+								resultHTML += `<li class="osirase-nimotu-nakami1">${item.B}の${item.C}、${item.H}</li><li class="osirase-nimotu-nakami2">${item.P}</li><br>`;
+							}
+						});
+							loadingDiv.style.display = "none";
+							resultDiv.style.display = "block";
+							resultDiv.innerHTML = `<div class="osirase-nimotu-stack"><h1><span style="color: #ea4335;">${title}</h1></div><ul>${resultHTML}</ul>`;
+						})
+						.catch(error => {
+							clearTimeout(timeout);
+							loadingDiv.innerHTML = error.message;
+							if (error.message === "サーバーエラーが発生しました。") {
+								loadingDiv.innerHTML = "サーバーエラーが発生しました。";
+							} else if (error.message === "インターネットの接続が悪いようです。") {
+								loadingDiv.innerHTML = "インターネットの接続が悪いようです。インターネットの接続状況を確認して変更ボタンを押してみてください。";
+							} else if (error.message === "ご迷惑をおかけします。クロスドメインエラーのようです。サーバー側の一時的な問題なのでお手数おかけしますが後でもう一度試してみてください。") {
+								loadingDiv.innerHTML = "ご迷惑をおかけします。クロスドメイン制約によりデータを取得できません。サーバー側の一時的な問題なのでお手数おかけしますが後でもう一度試してみてください。";
+							} else {
+								loadingDiv.innerHTML = "エラーが発生しました。インターネットの接続状態を確認して変更ボタンを押してみてください。";
+							}
+						});
+					}
+				}
+			</script>
+		</head>
+		<body>
+			<div class="osirase-nimotu">
+				<div class="osirase-nimotu-custom page-main">
+				<h1>各教科の必要な荷物</h1>
+				<label for="osirase-nimotu-yearSelect">学年を選択:</label>
+					<select id="osirase-nimotu-yearSelect" class="dropdown-list">
+						<option value="">学年の選択</option>
+						<option value="1年生">1年生</option>
+						<option value="2年生">2年生</option>
+						<option value="3年生">3年生</option>
+						<option value="対象のみ">対象者のみ</option>
+					</select>
+					<button id="osirase-nimotu-changeButton" onclick="osiraseNimotu_updateData()">変更</button>
 				</div>
-			</body>
-			</html>
-		</object>
+			<div id="osirase-nimotu-loading" style="display: none;"></div>
+			<div id="osirase-nimotu-result" class="osirase-nimotu-hontai"></div>
+			</div>
+		</div>
 	</div>
 	<script>
-	document.getElementById('menu-syosai').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'block';
-		document.getElementById('menu-zenkou-page').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
-		document.getElementById('menu-zenkou').style.backgroundColor = '';
-	});
-	document.getElementById('menu-zenkou').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'none';
-		document.getElementById('menu-zenkou-page').style.display = 'block';
-		document.getElementById('menu-syosai').style.backgroundColor = '';
-		document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
-	});
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
 	</script>
 </body>
 </html>
