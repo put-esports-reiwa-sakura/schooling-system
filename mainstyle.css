@@ -6,26 +6,14 @@
 /* Check: Akita (teacher),hutamura (teacher), hashimoto */
 /* Thank you to everyone who helped us. */
 /* 共通 */
-.gr{color: #ea4335;}
-.gb{color: #4285f4;}
-.gg{color: #34a853;}
-.gy{color: #fbbc05;}
-.bab{background-color: #4285F4;}
-.bag{background-color: #0F9D58;}
-.bao{background-color: #FF5722;}
-.bada{background-color: #777;}
 body {
 	font-family: 'Zen Maru Gothic', sans-serif;
-	background-color: #333;
-	color: white;
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
 }
 button {
 	margin: 10px;
-	background-color: #a3a3a3;
-	color: #fff;
 	padding: 15px 20px;
 	border: none;
 	border-radius: 4px;
@@ -33,9 +21,14 @@ button {
 	transition: background-color 0.3s ease;
 	font-size: 24px;
 }
+.main-menu-content {
+	display: flex;
+	align-items: center;
+}
+.main-menu-title {
+	flex: 0.9;
+}
 .menu-linkbutton {
-	border: 2px solid #000000;
-	background-color: #5b5b5b;
 	margin-top: 10px;
 	padding: 0px 10px;
 	display: inline-block;
@@ -44,41 +37,63 @@ button {
 .dropdown-list {
 	font-size: 30px;
 	padding: 8px;
-	border: 2px solid #4285f4;
-	background-color: #202124;
-	color: #ffffff;
 	border-radius: 8px;
 	height: 2.4em;
 }
 .dropdown-list select:focus {
 	outline: none;
-	border: 1px solid #4285f4;
-	box-shadow: 0 0 5px #4285f4;
-}
-.menu-button-sentaku {
-	background-color: #d7996d;
-}
-.menu-inner-sentaku {
-	background-color:#4285f4;
-	color:black;
 }
 .main-error-display {
-	color: #ff9090;
 	font-weight: bold;
 	font-size: 1.2em;
 	text-align: center;
 	margin-top: 20px;
 }
+/* スライド式スイッチのスタイリング */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+input:checked + .slider {
+	background-color: #2196F3;
+}
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}  
 /* メイン */
 .menu-copyright {
 	font-size: 14px;
-	color: #C0C0C0;
 	position: fixed;
 	top: 0;
 	padding: 5px;
 }
 .menu-button {
-	border: 1px solid #ddd;
 	border-radius: 20px;
 	padding: 0 15px;
 	text-align: center;
@@ -86,7 +101,6 @@ button {
 }
 /* でんしゃ */
 .iki-container {
-	color: #FFFFFF;
 	font-family: Arial, sans-serif;
 	max-width: 100%;
 	padding: 20px;
@@ -97,10 +111,8 @@ button {
 	padding-top: 14px;
 	top: 0%;
 	z-index: 999;
-	background-color: rgba(51, 51, 51, 0.5);
 }
 .iki-container .results {
-	background-color: #1e1e1e;
 	padding: 20px;
 	list-style: none;
 }
@@ -108,8 +120,6 @@ button {
 	display: flex;
 	align-items: center;
 	border-radius: 5px;
-	border: 1px solid #333;
-	background-color: #313131;
 }
 .iki-container .results .train .train-time {
 	text-align: center;
@@ -121,7 +131,6 @@ button {
 }
 .iki-container .results .train .train-time::before {
 	content: '';
-	border-left: 1px solid #666;
 	height: 100%;
 	position: absolute;
 	left: -10px;
@@ -135,12 +144,9 @@ button {
 .iki-container .results .travel-time {
 	width: 85px;
 	padding: 15px;
-	border-right: 6px solid #02ff00;
 	text-align: center;
 }
 /* べんきょのにもつ */
-.osirase-nimotu .osirase-nimotu-hontai ul .osirase-nimotu-nakami1 {color: burlywood;}
-.osirase-nimotu .osirase-nimotu-hontai ul .osirase-nimotu-nakami2 {color: aquamarine;}
 .osirase-nimotu .osirase-nimotu-custom {text-align: center;}
 .osirase-nimotu h1 {text-align: center;}
 .osirase-nimotu .osirase-nimotu-custom label {font-size: 25px;}
@@ -149,9 +155,7 @@ button {
 	font-family: 'メイリオ', sans-serif;
 	max-width: 90%;
 	margin: 10px auto;
-	background-color: #444;
 	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 20px;
 }
 .osirase-nimotu li {
@@ -165,7 +169,6 @@ button {
 	top: 0;
 	left: 0%;
 	z-index: 999;
-	background-color: rgba(51, 51, 51, 0.5);
 }
 .osirase-nimotu #osirase-nimotu-loading {
 	text-align: center;
@@ -175,29 +178,18 @@ button {
 /* めいんにもつ */
 .nimotu-container {
 	font-family: sans-serif;
-	color: #fff;
 	margin: 10px auto;
-	background-color: #444;
 	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 20px;
 	max-width: 90%;
 }
 @media (max-width: 480px) {
-	.nimotu-container {
-		padding: 10px;
-	}
+	.nimotu-container {padding: 10px;}
 }
 @media screen and (max-width: 767px) {
-	.nimotu-container {
-		border: 1px solid #ddd;
-		padding: 10px;
-	}
+	.nimotu-container {padding: 10px;}
 }
-.nimotu-titleh1 {
-	color: #f4b742;
-	text-align: center;
-}
+.nimotu-titleh1 {text-align: center;}
 .nimotu-ul {
 	list-style-type: none;
 	padding: 0;
@@ -207,28 +199,15 @@ button {
 .nimotu-note {font-weight: bold;}
 .nimotu-note h1 {text-align: center;}
 .nimotu-note p {text-align: left;}
-.nimotu-color-red {color: #ff7676;}
-.nimotu-item-title {
-	font-weight: bold;
-	color: #ffb300;
-}
-.nimotu-item-description {
-	font-weight: bold;
-	color: #9ee3b0;
-}
-.nimotu-item-box input[type="checkbox"] {
-	display: none;
-}
+.nimotu-item-title {font-weight: bold;}
+.nimotu-item-description {font-weight: bold;}
+.nimotu-item-box input[type="checkbox"] {display: none;}
 .nimotu-item-box label {
-	border: 2px solid #ddd;
 	padding: 10px 20px;
 	cursor: pointer;
 	display: block;
 	border-radius: 8px;
 	margin-right: 5px;
-}
-.nimotu-item-box input[type="checkbox"]:checked + label {
-	background-color: #a5bde3;
 }
 /* ぜんたいこーてー */
 .zentaikoutei #zentaikoutei-title {
@@ -238,14 +217,11 @@ button {
 	align-items: center;
 	font-size: 170%;
 	padding: 10px;
-	background-color: rgba(51, 51, 51, 0.5);
 }
 .zentaikoutei #zentaikoutei-title-comment {
 	font-size: 1.3em;
-	background-color: #444;
 	border-radius: 8px;
 	padding: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .zentaikoutei .zentaikoutei-main {
 	text-align: center;
@@ -254,22 +230,14 @@ button {
 .zentaikoutei-content div {
 	max-width: 90%;
 	margin: 10px auto;
-	background-color: #444;
 	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 20px;
 	font-family: 'Zen Maru Gothic', sans-serif;
 }
-.zentaikoutei-content div[data-timeslot] div {background-color: dimgray;}
 .zentaikoutei-content div[data-timeslot] h2 {
 	position: sticky;
 	top: 12.4%;
-	background-color: rgba(68, 68, 68, 0.5);
 }
-.zentaikoutei-1st-year{color: #ff9287;}
-.zentaikoutei-2nd-year{color: #ffe08c;}
-.zentaikoutei-3rd-year{color: #6da5ff;}
-.zentaikoutei-targeted{color: #a8fcb7;}
 /* せつめーるーる */
 .setumei-body {
 	margin: 0;
@@ -284,15 +252,10 @@ button {
 .osirase-content div {
 	max-width: 90%;
 	margin: 10px auto;
-	background-color: #444;
 	border-radius: 8px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	padding: 20px;
 }
-.osirase-content .started {color: lime;}
-.osirase-content .ended {color: orange;}
 .osirase-sousapanel {
-	background-color: rgb(121 121 121 / 0.9);
 	padding: 2px;
 	text-align: center;
 	position: sticky;
@@ -302,7 +265,6 @@ button {
 .osirase-sousapanel #toggleContainer,.osirase-saiyomikomi {
 	display: inline-block;
 	padding: 2px 12px;
-	border: 2px solid #000;
 	border-radius: 10px;
 	text-align: center;
 	font-weight: bold;
@@ -310,10 +272,6 @@ button {
 	cursor: pointer;
 }
 .osirase-sousapanel #toggleButton {display: none;}
-.osirase-tili2 {color:rgb(255, 179, 0);}
-.osirase-tili1 {color:rgb(255, 0, 0);}
-.osirase-mario-on {background-color: #13af13;}
-.osirase-mario-off {background-color: #d9c242;}
 @media (min-width: 768px) {
 	/* PC用スタイル */
 	body {
