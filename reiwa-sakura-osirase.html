@@ -28,24 +28,24 @@
 <body>
 	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
 	<div style="margin-top:16px;">
-		<h2 onclick="location.href = '/schooling-system/index'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
+		<h2 onclick="location.href = '/schooling-system/index.html'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
 		<p>10月31日(火)～11月3日(金)</p>
 		<div class="menu-button">
-			<button class="button" style="background-color:#4285f4;color:black;">お知らせ</button>
+			<button class="button menu-inner-sentaku">お知らせ</button>
 			<button class="button" id="menu-syosai">詳細</button>
 			<button class="button" id="menu-zenkou">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu'">各教科の荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru'">説明とﾙｰﾙ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nitime'">1～4日目</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain'">行き電車</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain'">帰り電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
 		</div>
-		<object>
+		<div class="reiwa-sakura-main-content">
 			<h1>こちらは当日使用するお知らせ(しおり早見表)ページです。</h1>
 			<div class="mainosirase">
 				<h1 style="text-align:center;font-size:2.3em;color:#ffafaf;">重要なお知らせ</h1>
@@ -96,21 +96,21 @@
 					</ul>
 				</div>
 			</div>
-		</object>
+		</div>
 	</div>
 	<script>
-	document.getElementById('menu-syosai').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'block';
-		document.getElementById('menu-zenkou-page').style.display = 'none';
-		document.getElementById('menu-syosai').style.backgroundColor = '#d7996d';
-		document.getElementById('menu-zenkou').style.backgroundColor = '';
-	});
-	document.getElementById('menu-zenkou').addEventListener('click', function () {
-		document.getElementById('menu-syosai-page').style.display = 'none';
-		document.getElementById('menu-zenkou-page').style.display = 'block';
-		document.getElementById('menu-syosai').style.backgroundColor = '';
-		document.getElementById('menu-zenkou').style.backgroundColor = '#d7996d';
-	});
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
 	</script>
 </body>
 </html>
