@@ -41,12 +41,27 @@ function saveSwitchState(state) {
   localStorage.setItem('switchState', state);
 }
 function loadSwitchState() {
-  return localStorage.getItem('switchState');
+  const savedState = localStorage.getItem('switchState');
+  return savedState !== null ? savedState : 'on';
 }
 window.addEventListener('DOMContentLoaded', () => {
   const mode = getModeFromURL();
+  const toggleSwitch = document.getElementById('mode-switch');
+  
   if (mode) {
     loadAppropriateStylesheet(mode);
+    if (mode === 'dark') {
+      toggleSwitch.checked = true;
+    }
+  } else {
+    const savedState = loadSwitchState();
+    if (savedState === 'on') {
+      loadAppropriateStylesheet('dark');
+      toggleSwitch.checked = true;
+    } else {
+      loadAppropriateStylesheet('light');
+      toggleSwitch.checked = false;
+    }
   }
   setupModeSwitch();
 });
