@@ -15,12 +15,22 @@
 	<title>各教科の荷物-令和さくら高等学院-令和5年度スクーリング</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
 	<link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<link id="stylesheet-link" rel="stylesheet" href="color-black.css">
+	<script src="kirikae.js"></script>
 </head>
 <body>
 	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
 	<div style="margin-top:16px;">
-		<h2 onclick="location.href = '/schooling-system/index'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
-		<p>10月31日(火)～11月3日(金)</p>
+		<div class="main-menu-content">
+			<div class="main-menu-title">
+				<h2 onclick="location.href = '/schooling-system/'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
+				<p>10月31日(火)～11月3日(金)</p>
+			</div>
+			<label class="switch">
+				<input id="mode-switch" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</div>
 		<div class="menu-button">
 			<button class="button" onclick="location.href = 'reiwa-sakura-osirase'">お知らせ</button>
 			<button class="button menu-button-sentaku" id="menu-syosai">詳細</button>
