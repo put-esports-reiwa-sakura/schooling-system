@@ -53,53 +53,53 @@
 					</div>				
 				</div>
 				<script>
-var currentDate = new Date();
-var eventContainer = document.getElementById('eventContainer');
-var toggleButton = document.getElementById('toggleButton');
-var toggleLabel = document.querySelector('label[for="toggleButton"]');
-toggleLabel.textContent = '全部表示 OFF';
-toggleLabel.style.backgroundColor = '#13af13';
+					var currentDate = new Date();
+					var eventContainer = document.getElementById('eventContainer');
+					var toggleButton = document.getElementById('toggleButton');
+					var toggleContainer = document.getElementById('toggleContainer');
+					var toggleLabel = document.querySelector('label[for="toggleButton"]');
+					toggleLabel.textContent = '全部表示 OFF';
+					toggleLabel.style.backgroundColor = '#13af13';
 
-function showEventDivs() {
-    var eventDivs = document.querySelectorAll('div[data-start][data-end]');
-    var isOn = toggleButton.checked;
-    eventDivs.forEach(function (eventDiv) {
-        var start = new Date(eventDiv.getAttribute('data-start'));
-        var end = new Date(eventDiv.getAttribute('data-end'));
-        
-        // 現在の日時と開始日時、終了日時を比較
-        if (currentDate >= start && currentDate <= end) {
-            eventDiv.style.display = 'block';
-        } else {
-            eventDiv.style.display = 'none';
-        }
-    });
-}
-
-function toggleEventDisplay() {
-    showEventDivs();
-    if (toggleButton.checked) {
-        toggleLabel.textContent = '全部表示 OFF';
-        toggleLabel.style.backgroundColor = '#13af13';
-    } else {
-        toggleLabel.textContent = '全部表示 ON';
-        toggleLabel.style.backgroundColor = '#d9c242';
-    }
-}
-
-function manualUpdate() {
-    showEventDivs();
-    location.reload();
-}
-
-// ページ読み込み時と1秒ごとに表示を更新
-window.addEventListener('load', function () {
-    showEventDivs();
-    setInterval(showEventDivs, 1000);
-});
-
-toggleButton.addEventListener('click', toggleEventDisplay);
-
+					function showEventDivs() {
+						var currentDate = new Date();
+						var eventDivs = document.querySelectorAll('div[data-start][data-end]');
+						var isOn = toggleButton.checked;
+						eventDivs.forEach(function (eventDiv) {
+							var start = new Date(eventDiv.getAttribute('data-start'));
+							var end = new Date(eventDiv.getAttribute('data-end'));
+							if (isOn) {
+								if (currentDate >= start && currentDate <= end) {
+									eventDiv.style.display = 'block';
+								} else {
+									eventDiv.style.display = 'none';
+								}
+							} else {
+								eventDiv.style.display = 'block';
+							}
+						});
+					}
+					function toggleEventDisplay() {
+						showEventDivs();
+						if (toggleButton.checked) {
+							toggleLabel.textContent = '全部表示 OFF';
+							toggleLabel.style.backgroundColor = '#13af13';
+						} else {
+							toggleLabel.textContent = '全部表示 ON';
+							toggleLabel.style.backgroundColor = '#d9c242';
+						}
+					}
+					function manualUpdate() {
+						showEventDivs();
+						location.reload();
+					}
+					window.addEventListener('load', function () {
+						showEventDivs();
+						setInterval(showEventDivs, 1000);
+					});
+					toggleButton.addEventListener('click', toggleEventDisplay);
+					toggleContainer.addEventListener('click', toggleEventDisplay);
+					var currentDate = new Date();
 					fetch('https://script.google.com/macros/s/AKfycbzJO2_O7owRZRud4GA3sW1KejirxijIK5EltBrV7xM3K__B3El4hYVfpBj9qFJsOxAwwg/exec', {
 						cache: 'no-store'
 					})
@@ -173,11 +173,19 @@ toggleButton.addEventListener('click', toggleEventDisplay);
 										var currentTime = new Date();
 										var timeDiff = startDateTime - currentTime;
 										var minutesUntilStart = Math.floor(timeDiff / 60000);
+										var endTimeDiff = endDateTime - currentTime;
+										var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
+
 										if (minutesUntilStart < 0) {
-											content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
+											if (minutesUntilEnd < 0) {
+												content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
+											} else {
+												content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
+											}
 										} else {
 											content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
 										}
+
 									}
 									updateCountdown();
 									setInterval(updateCountdown, 30000);
@@ -228,10 +236,17 @@ toggleButton.addEventListener('click', toggleEventDisplay);
 										var currentTime = new Date();
 										var timeDiff = startDateTime - currentTime;
 										var minutesUntilStart = Math.floor(timeDiff / 60000);
+										var endTimeDiff = endDateTime - currentTime;
+										var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
+
 										if (minutesUntilStart < 0) {
-											content.innerHTML = item.F + ' <span class="started">開始しました</span>';
+											if (minutesUntilEnd < 0) {
+												content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
+											} else {
+												content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
+											}
 										} else {
-											content.innerHTML = item.F + ' 開始まで' + minutesUntilStart + '分';
+											content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
 										}
 									}
 									updateCountdown();
