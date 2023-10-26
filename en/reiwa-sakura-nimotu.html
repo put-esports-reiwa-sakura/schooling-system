@@ -1,0 +1,275 @@
+<!-- ©2023 REIWA SAKURA KOUTOU GAKUIN -->
+<!-- ©2023 令和さくら高等学院 -->
+<!-- Access to https://www.reiwa-sakura.net/ -->
+<!-- がくいんちょう: のだ (teacher) -->
+<!-- Main Programmer: Aoyama -->
+<!-- Check: Akita (teacher),hutamura (teacher), hashimoto -->
+<!-- Thank you to everyone who helped us. -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="format-detection" content="telephone=no">
+	<title>荷物-令和さくら高等学院-令和5年度スクーリング</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+	<link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<link id="stylesheet-link" rel="stylesheet" href="color-black.css">
+	<script src="kirikae.js"></script>
+</head>
+<body>
+	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
+	<div style="margin-top:16px;">
+		<div class="main-menu-content">
+			<div class="main-menu-title">
+				<h2 onclick="location.href = '/schooling-system/index.html'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
+				<p>10月31日(火)～11月3日(金)</p>
+			</div>
+			<label class="switch">
+				<input id="mode-switch" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<div class="menu-button">
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button menu-button-sentaku" id="menu-syosai">詳細</button>
+			<button class="button" id="menu-zenkou">全体行程</button>
+		</div>
+		<div class="menu-button" id="menu-syosai-page" style="display:block;">
+			<button class="button menu-inner-sentaku">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+		</div>
+		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
+		</div>
+		<div class="reiwa-sakura-main-content">
+			<div class="nimotu-container">
+				<h1 class="nimotu-titleh1">持ち物確認</h1>
+				<p class="nimotu-note">
+				～学院上のルール～<br>・全員の荷物を把握することはできません。<br>そのため、<span class="nimotu-color-red">"モバイルバッテリー"持込禁止</span>です。<br><br>・今年のスクーリングは令和さくら高等学院以外のサポート校の生徒もいます。持ち物には全て名前を記入してください。<br><br>下にある四角い枠で囲われたそれぞれの項目はチェックボックスになっています。<br>　各自必要な持ち物をカバンにまとめる際にご活用ください。<br>　そして、ページ上部のボタンから[各教科の荷物]も一緒にご覧ください。
+				</p>
+				<ul class="nimotu-ul">
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">0.基本</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="schooling-siori-file">
+								<label for="schooling-siori-file">各自のスクーリングファイル</label>
+							</li>
+						</ul>
+						<span class="nimotu-item-description">各自に配られるしおりです。</span>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">1.保険証</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="insurance">
+								<label for="insurance">保険証 (コピーでも可)</label>
+							</li>
+						</ul>
+						<span class="nimotu-item-description">緊急で病院へ行く時に必要になります。</span>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">2.個人の交通費 [1日目:自宅 → 集合場所 , 4日目:解散場所 → 自宅]</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="transportation">
+								<label for="transportation">個人移動の交通費</label>
+							</li>
+						</ul>
+						<span class="nimotu-item-description">(※集合/解散　場所とはページ上部の[全体行程]→[行き電車]、[帰り電車]にある<span class="nimotu-color-red">赤色で示した駅</span>です。)<br>(manacaやtoica等に交通機関で使用する<span class="nimotu-color-red">往復の金額を</span>事前にチャージしておいてください)</span>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">3.飲み物・おやつ代等　　(食事・体育以外で水分を購入したい場合 など)</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="drinks">
+								<label for="drinks">飲物代等 (3,000円程度)</label>
+							</li>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">4.小遣い（お土産代等）</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="allowance">
+								<label for="allowance">小遣い(5,000円程度)</label>
+							</li>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">5.着替え〈日数分〉</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="change_of_clothes">
+								<label for="change_of_clothes">学習しやすい服装</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="sleepwear">
+								<label for="sleepwear">寝間着(ジャージなど)</label>
+							</li>
+							<span class="nimotu-item-description">※宿泊所に寝間着はありません。</span>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="underwear">
+								<label for="underwear">下着</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="socks">
+								<label for="socks">靴下</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="gym_shoes">
+								<label for="gym_shoes" class="nimotu-color-red">体育館シューズ</label>
+							</li>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">6.常備薬・マスク</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="medication_and_mask">
+								<label for="medication_and_mask">学校では薬は用意しませんのでご持参ください</label>
+							</li>
+							<span class="nimotu-item-description">※スクーリング期間は10/31(火)～11/3(金)の4日間です。</span>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">7.雨具等</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="rain_gear">
+								<label for="rain_gear">折り畳み傘 または レインコート</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="hat_optional">
+								<label for="hat_optional">帽子(任意)</label>
+							</li>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">8.洗面具</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="toiletries">
+								<label for="toiletries">歯磨き粉(ペースト)</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="toothbrush">
+								<label for="toothbrush">歯ブラシ</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="towel">
+								<label for="towel">タオル</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="casual_clothing">
+								<label for="casual_clothing">バスタオル</label>
+							</li>
+							<span class="nimotu-item-description">宿泊所にバスタオルはありません各自必要な方は持参ください。</span>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="Hairdryer">
+								<label for="Hairdryer">ドライヤー(施設内にはあります)</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="Hanger">
+								<label for="Hanger">ハンガー(任意)</label>
+							</li>
+							<span class="nimotu-item-description">※ドライヤーは施設内にはありますが、ドライヤーの使用時間が長い人は持ってくることを推奨します。<br>
+							※シャンプー&ボディソープ なども施設内にありますが、必要な人は持ってきましょう。</span>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">9.学習用具</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="study_tools">
+								<label for="study_tools">筆記用具</label>
+							</li>
+							<span class="nimotu-item-description">スクーリングは授業を受けることが目的ですが、荷物が重くなるので教科書は要りません。<br>明蓬館本校の先生方が配布するプリントに取り組む形なので、<span class="nimotu-color-red">筆記用具は必須</span>になります。<br>
+							(※筆箱などに シャーペン 、 消しゴム 、 シャーペンの芯 など最低限がまとまっていると便利です。)<br><br>※<span class="nimotu-color-red">ボールペン 必須 </span>です。(最終日、スクーリングに参加しました。という書類に<span class="nimotu-color-red">自分の名前を</span>書きます。)<br><br>※筆箱の中にカッターやハサミがある人は搭乗検査の際、<span class="nimotu-color-red"></span>没収される</span>ことがあります。</span>
+						</ul>
+					</li>
+					<li class="nimotu-li">
+						<span class="nimotu-item-title">10.その他</span>
+						<ul class="nimotu-ul">
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="charger">
+								<label for="charger">スマホ充電器</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="handkerchief">
+								<label for="handkerchief">ハンカチ</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="tissue">
+								<label for="tissue">ティッシュ</label>
+							</li>
+							<li class="nimotu-item-box">
+								<input type="checkbox" id="Insect_repellent">
+								<label for="Insect_repellent">虫よけ用品</label>
+							</li>
+							<span class="nimotu-item-description">※航空機利用の場合、高圧ガスの充填された虫よけ・化粧スプレー缶類は、100ml 前後の容器に限り客室内持ち込みも可能です。それより大きいサイズ（200ml以上）のものは検査官の判断により没収されることがあります。<br><br>※上記を目安に各自で必ず持参してください。</span>
+						</ul>
+					</li>
+				<ul>
+				<p class="nimotu-note"> 各教科の荷物 もご確認ください。</p>
+			</div>
+			<script>
+				window.addEventListener('load', function () {
+					const checkboxState = JSON.parse(localStorage.getItem('checkboxState')) || {};
+					for (const key in checkboxState) {
+						if (checkboxState.hasOwnProperty(key)) {
+							const checkbox = document.getElementById(key);
+							if (checkbox) {
+								checkbox.checked = checkboxState[key];
+							}
+						}
+					}
+					document.addEventListener('change', function (event) {
+						if (event.target.type === 'checkbox') {
+							checkboxState[event.target.id] = event.target.checked;
+							localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+						}
+					});
+				});
+				const listItems = document.querySelectorAll('li');
+				listItems.forEach(listItem => {
+					const checkboxes = listItem.querySelectorAll('input[type="checkbox"]');
+					const label = listItem.querySelector('.nimotu-item-title');
+					checkboxes.forEach(checkbox => {
+						checkbox.addEventListener('change', function () {
+							const allChecked = [...checkboxes].every(cb => cb.checked);
+
+							if (allChecked) {
+								label.style.color = '#4CAF50';
+								label.style.fontWeight = 'bold';
+							} else {
+								label.style.color = '';
+								label.style.fontWeight = '';
+							}
+						});
+					});
+				});
+			</script>
+		</div>
+	</div>
+	<script>
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
+	</script>
+</body>
+</html>

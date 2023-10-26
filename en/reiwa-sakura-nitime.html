@@ -1,0 +1,248 @@
+<!-- ©2023 REIWA SAKURA KOUTOU GAKUIN -->
+<!-- ©2023 令和さくら高等学院 -->
+<!-- Access to https://www.reiwa-sakura.net/ -->
+<!-- がくいんちょう: のだ (teacher) -->
+<!-- Main Programmer: Aoyama -->
+<!-- Check: Akita (teacher),hutamura (teacher), hashimoto -->
+<!-- Thank you to everyone who helped us. -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="format-detection" content="telephone=no">
+	<title>1～4日目-令和さくら高等学院-令和5年度スクーリング</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+	<link rel="stylesheet" type="text/css" href="mainstyle.css">
+	<link id="stylesheet-link" rel="stylesheet" href="color-black.css">
+	<script src="kirikae.js"></script>
+</head>
+<body>
+	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
+	<div style="margin-top:16px;">
+		<div class="main-menu-content">
+			<div class="main-menu-title">
+				<h2 onclick="location.href = '/schooling-system/index.html'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
+				<p>10月31日(火)～11月3日(金)</p>
+			</div>
+			<label class="switch">
+				<input id="mode-switch" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<div class="menu-button">
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button" id="menu-syosai">詳細</button>
+			<button class="button menu-button-sentaku" id="menu-zenkou">全体行程</button>
+		</div>
+		<div class="menu-button" id="menu-syosai-page" style="display:none;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+		</div>
+		<div class="menu-button" id="menu-zenkou-page" style="display:block;">
+			<button class="button menu-inner-sentaku">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
+		</div>
+		<div class="reiwa-sakura-main-content">
+			<div class="zentaikoutei">
+			<div class="zentaikoutei-main">
+				<select class="zentaikoutei-dropdown-list dropdown-list">
+					<option value="1日目">1日目</option>
+					<option value="2日目">2日目</option>
+					<option value="3日目">3日目</option>
+					<option value="4日目">4日目</option>
+				</select>
+				<button class="zentaikoutei-custom-button" id="zentaikoutei-loadDataButton">データを読み込む</button>
+			</div>
+			<div id="zentaikoutei-title"></div>
+			<div id="zentaikoutei-title-comment">選択して押してください。</div>
+			<div class="zentaikoutei-content" id="zentaikoutei-eventDisplay"><div><h1>読み込み中...</h1></div></div>
+			</div>
+			<script>
+				var jsonDataUrl = 'https://raw.githubusercontent.com/put-esports-reiwa-sakura/schooling-system/main/spreadsheetdata.json';
+				var dropdown = document.querySelector(".zentaikoutei-dropdown-list");
+				var eventDisplay = document.getElementById("zentaikoutei-eventDisplay");
+				var loadDataButton = document.getElementById("zentaikoutei-loadDataButton");
+				var selectedValue = localStorage.getItem('selectedValue');
+				if (selectedValue) {
+					dropdown.value = selectedValue;
+				}
+				function updateDisplay(selectedValue) {
+					var dateMap = {
+						"1日目": "【10月31日（火）１日目",
+						"2日目": "【11月1日（水）２日目",
+						"3日目": "【11月2日（木）３日目",
+						"4日目": "【11月3日（金）４日目"
+					};
+					var formattedValue = dateMap[selectedValue];
+
+					var titleElement = document.getElementById("zentaikoutei-title");
+
+					titleElement.innerHTML = formattedValue + "】";
+					var imageElement = document.createElement("img");
+					imageElement.src = "https://lh3.googleusercontent.com/fife/AK0iWDzJlQY5QnJLpl5yH1EM98Iq8hrvwOfv3Vy2-6rP3uGi3hSqu7KCz7HaWsfJ8ZCAivEbSAUdnSMf1te4kLUfB-AuVw68nG_YurRRXcGXktRTE54ksy-_x5BeP7C9PtgNn3_4hKdzdVbEN4vkY_RmIM9wY-8LIfQqGg7q_gmR5ze6wv34qUVXqtv9w7OOjTlCqG4ZSJp7ZLpXMrqDivMg7HNPvqlowwFfScQBBpeodb_asL-sdnC6YmQRRPAvIg5qlyfGwqBi4uUICo4F2H7aAGMjTWqapVpMSIhLqA66JFbMecW8kWZ-Ww9PaE0b48PX0hkxY1Nmw-g4k4KT1UiZxJ2c2W39HN_NPekoZLhiYKrNpXf5jwqaA7BE6pV9WyCd3sKNvCKAVi1mta4VreuhweEsOGPQpm4LAHU8yt54nxR9kjJiSxrDeu24Me3wiyWG1YS8a_0CEAUjJatcl9cgLx0HWMSYxvD9uOo2eSlIiQuBPx3FmvXZN7EzPWniDwG3QejXpfCvPir1DNI4KC8-DywDoeTr2M6uJ37djvR0I3kWXvE931_RVRhYAa5lavK1jmaG3TOPZQExX6yzOJfSF1Wv7wuX5qhmZ7e4njQXdEPUv6HdntHQ8mU-PpF8R6cQpf2oPeK7Gx1Q4q2ERkDb9O1Y8p4yUwtjATOyJqVEchd6ak19B6qwWCL3zZ0UtUKHM-s4IN_jd4aECUw-KrSsUa75IDtHY2qHXoCoC8xebrpxKsZCUz6_YNq8xHgPxBhtE6smGskSZWAIOYaB-ei7J-zRUDs2aiXBr0tcXpEF6Kg8VMIEFdBdRyrGRqDfqG7xIX3EMkKcljPxaUFZJhA7fYdArHSm8IihP77OiOnvLh4wo5USLpqGZ-q8xKSdDEJ1bCs7tN4og0pDZmQTbw8-ESZ7ZoE6YLauUKIn0AfTPHsw32nbEME11i8VZHZZHAt76wFlYD-EmA4A0dMcLMinC3gDKn3FNgiCZXBCaM3yCiyhuIQ8Z0-JF7yuLg_giv6YlpmV2DgxC24TuSS1ol93v5GkpnofBy4RH8R25WEduTKx5nynF_bn-2vk6b11PeiAkqDYBe8okqOrSQYWMzvq08wxSRAYEAODaM0fjFIi0GV41neNl-dZB1vrSN_uvplkrH8Wx8gy_nghj1iHsN0QrvgYofEhZa0D_DzG05HzQpECD7Yb_JmIl10k9hUcYWZgu1exhIqNO3PfGHf1MwAV61Q4YBqbdV3Xx93dRNDvyJ9cUH6M_rrq58MKuQ9fg1R6hVHhzXJ3EQm7g45CHh1oMA-P2h60NUIHwq2x0pTAEvXIHR8vurM9LEwQn5bCBvX9Ec7mvPkgH_7becJynDi9gCt7xHyq6NKqCjpvlUuOo9kG-AtkIbyVgpucD5xub4hEIsG3EA8zXlY50VekkRc9-2W3bvnxNETpsbCL1Hpd1Bil0A5S2D_wtAdb_mqVaBiYpXhIej2lytdk0bevFTrnnEvvsLnGjGc3robkuodIDI7vMtL1LngGWLuZBLq6hCSOEw5xgSe30EXhWINfX7MWmj4=w2000-h3342";
+					imageElement.alt = "説明のない明蓬館の画像の説明画像";
+					imageElement.style.maxWidth = "100%";
+					imageElement.style.height = "auto";
+					titleElement.appendChild(document.createElement("br"));
+					titleElement.appendChild(imageElement);
+					var message = "";
+					switch (selectedValue) {
+						case "1日目":
+							message = "※授業内容、授業時間は当日変更することがあります。<br>ページ上部にある[スクーリング詳細]→[各教科の必要な荷物]に詳しい内容があります。<br><br>※朝食食べない人へ。もちません。昼食食べられるのは飛行機乗った後です。";
+							break;
+						case "2日目":
+							message = "※授業内容、授業時間は当日変更することがあります。<br>ページ上部にある[スクーリング詳細]→[各教科の必要な荷物]に詳しい内容があります。";
+							break;
+						case "3日目":
+							message = "※授業内容、授業時間は当日変更することがあります。<br>ページ上部にある[スクーリング詳細]→[各教科の必要な荷物]に詳しい内容があります。";
+							break;
+						case "4日目":
+							message = "※授業内容、授業時間は当日変更することがあります。<br>ページ上部にある[スクーリング詳細]→[各教科の必要な荷物]に詳しい内容があります。";
+							break;
+					}
+						document.getElementById("zentaikoutei-title-comment").innerHTML = message;
+					}
+					if (selectedValue) {
+						updateDisplay(selectedValue);
+						loadData();
+					}
+					loadDataButton.addEventListener("click", function() {
+						selectedValue = dropdown.value;
+						localStorage.setItem('selectedValue', selectedValue);
+						updateDisplay(selectedValue);
+						loadData();
+					});
+				function getClassForYear(year) {
+					switch (year) {
+						case "1年生": return "zentaikoutei-1st-year";
+						case "2年生": return "zentaikoutei-2nd-year";
+						case "3年生": return "zentaikoutei-3rd-year";
+						case "対象のみ": return "zentaikoutei-targeted";
+					}
+				}
+				function loadData() {
+					if (selectedValue !== "") {
+					fetch(jsonDataUrl)
+						.then(response => {
+							if (!response.ok) {
+							if (response.status === 500) {
+								throw new Error("サーバーエラーが発生しました。");
+							} else if (response.status === 403) {
+								throw new Error("クロスドメイン制約によりデータを取得できません。");
+							} else if (response.status === 503) {
+								throw new Error("サービスが利用不可です。");
+							} else {
+								throw new Error("不明なエラーが発生しました。");
+							}
+							}
+							return response.json();
+						})
+						.then(data => {
+							var matchingData = data.filter(item => item.B === selectedValue);
+							eventDisplay.innerHTML = "";
+								if (matchingData.length > 0) {
+									matchingData.forEach(function(item) {
+										var displayContent = "";
+										if (item.L === "特別" || item.L === "お知らせ" || item.L === "常時表示") {
+											var divElement = document.createElement("div");
+											if (item.F !== "") {displayContent += "<h2>" + item.F + "</h2>";}
+											if (item.G !== "") {displayContent += "<p>" + item.G + "<br>";}
+											if (item.H !== "") {displayContent += item.H + "<br>";}
+											if (item.I !== "") {displayContent += item.I + "<br>";}
+											if (item.J !== "") {displayContent += item.J + "</p>";}
+											divElement.innerHTML = displayContent;
+											eventDisplay.appendChild(divElement);
+										} else if (item.L === "ok") {
+											var divElement = document.createElement("div");
+											if (item.C !== "") {displayContent += "<h2>" + item.C + " ";}
+											if (item.D !== "") {displayContent += item.D + "～";}
+											if (item.E !== "") {displayContent += item.E + "</h2>";}
+											if (item.F !== "") {displayContent += "<p>対象" + item.F + " ";}
+											if (item.H !== "") {displayContent += item.H + "<br>";}
+											if (item.G !== "") {displayContent += "場所：" +　item.G + "";}
+											if (item.I !== "") {displayContent += "<br><span style='color: #ffcf41;'>注意：" + item.I + "</span></p>";}
+											divElement.innerHTML = displayContent;
+											eventDisplay.appendChild(divElement);
+										} else {
+											var timeSlotDiv = document.querySelector(`div[data-timeslot="${item.C}"]`);
+											if (!timeSlotDiv) {
+												timeSlotDiv = document.createElement("div");
+												timeSlotDiv.setAttribute("data-timeslot", item.C);
+												timeSlotDiv.innerHTML = `<h2>${item.C} ${item.D}～${item.E}</h2>`;
+												eventDisplay.appendChild(timeSlotDiv);
+											}
+											var courseDiv = document.createElement("div");
+											if (item.F !== "") {displayContent += `<h3><span class='${getClassForYear(item.F)}'>${item.F}</span> ${item.H}</h3>`;}
+											if (item.G !== "") {displayContent += "<p>場所：" + item.G + "<br>";}
+											if (item.P !== "") {displayContent += "持ち物：" + item.P + "<br><br>" ;}
+											if (item.N !== "") {displayContent += "タイトル：" + item.N + "<br><br>";}
+											if (item.O !== "") {displayContent += item.O ;}
+											if (item.I !== "") {displayContent += "<br><br><span style='color: #ffcf41;'>注意：" + item.I + "</span></p>";}
+											courseDiv.innerHTML = displayContent;
+											timeSlotDiv.appendChild(courseDiv);
+											if (!timeSlotDiv.querySelector(".footer")) {
+												var footerDiv = document.createElement("div");
+												footerDiv.className = "footer";
+												timeSlotDiv.appendChild(footerDiv);
+											}
+											function escapeHTML(html) {
+												const div = document.createElement('div');
+												div.textContent = html;
+												return div.innerHTML;
+											}
+											timeSlotDiv.querySelector(".footer").innerHTML = `<h3>対象ではない人の部屋</h3>${item.J}`;
+											timeSlotDiv.appendChild(timeSlotDiv.querySelector(".footer"));
+										}
+									});
+								} else {
+									eventDisplay.innerHTML = "<div>選択した日にちに関連する情報が見つかりません。</div>";
+								}
+							})
+							.catch(error => {
+							var errorDiv = document.createElement("div");
+							if (error.message === "Failed to fetch") {
+								errorDiv.textContent = "ネットワークが不安定です。インターネットの接続を確認してください。";
+							} else if (error.message === "Network Error") {
+								errorDiv.textContent = "ネットワークエラーが発生しました。再度お試しください。";
+							} else if (error.message === "Request timeout") {
+								errorDiv.textContent = "アクセス数増加が原因だと思われますが、サーバーからの応答が遅くなっています。もう一度試してみてください。";
+							} else if (error.message === "Connection refused") {
+								errorDiv.textContent = "申し訳ございません。サーバーへの接続が拒否されてしまいました。お手数ですがしばらくした後再度お試しください。";
+							} else if (error.message === "No internet connection") {
+								errorDiv.textContent = "インターネットに接続されていません。インターネット接続を確認してください。";
+							} else if (error.message === "DNS resolution failed") {
+								errorDiv.textContent = "ホスト名を解決できません。ネットワーク設定を確認してください。";
+							} else if (error.message.includes("CORS policy") || error.message.includes("Cross-Origin Request Blocked")) {
+								errorDiv.textContent = "まさか...このエラーを表示させたアンタ...ハッカー..."; // クロスオリジンリクエストがブロックされました。この操作は許可されていません。
+							} else {
+								errorDiv.textContent = "想定外のエラーが発生しました: " + error.message +" お手数ですが、再度お試しください。";
+							}
+							errorDiv.classList.add("main-error-display");
+							eventDisplay.innerHTML = "";
+							eventDisplay.appendChild(errorDiv);
+						});
+					}
+				}
+			</script>
+		</div>
+	</div>
+	<script>
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
+	</script>
+</body>
+</html>
