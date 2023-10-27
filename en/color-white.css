@@ -15,7 +15,7 @@
 .bada { background-color: #c6c6c6; }
 body {
     background-color: #fff;
-    color: #333;
+    color: #000;
 }
 button {
     border: 2px solid #000000;
@@ -65,7 +65,7 @@ button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 767px) {
-    .nimotu-container { border: 1px solid #ddd; }
+    .nimotu-container { border: 1px solid #000000; }
 }
 .nimotu-titleh1 { color: #f4b742; }
 .nimotu-color-red { color: #ff7676; }
@@ -103,3 +103,11 @@ button {
 .osirase-tili1 { color: #ff0000; }
 .osirase-mario-on { background-color: #13af13; }
 .osirase-mario-off { background-color: #d9c242; }
+.mainosirase {
+    background-color: #FFF;
+    max-width: 90%;
+    margin: 10px auto;
+    border-radius: 8px;
+    padding: 20px;
+    border: 2px solid #000000;
+}
