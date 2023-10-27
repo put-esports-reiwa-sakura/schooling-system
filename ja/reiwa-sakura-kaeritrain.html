@@ -1,0 +1,367 @@
+<!-- ©2023 REIWA SAKURA KOUTOU GAKUIN -->
+<!-- ©2023 令和さくら高等学院 -->
+<!-- Access to https://www.reiwa-sakura.net/ -->
+<!-- がくいんちょう: のだ (teacher) -->
+<!-- Main Programmer: Aoyama -->
+<!-- Check: Akita (teacher),hutamura (teacher), hashimoto -->
+<!-- Thank you to everyone who helped us. -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="format-detection" content="telephone=no">
+	<title>帰り電車-令和さくら高等学院-令和5年度スクーリング</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+	<link rel="stylesheet" type="text/css" href="../command/mainstyle.css">
+	<link id="stylesheet-link" rel="stylesheet" href="../command/color-black.css">
+	<script src="../command/kirikae.js"></script>
+</head>
+<body>
+	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
+	<div style="margin-top:16px;">
+		<div class="main-menu-content">
+			<div class="main-menu-title">
+				<h2 onclick="location.href = '../ja/index.html'" class="menu-linkbutton">令和5年度スクーリングについて</h2>
+				<p>10月31日(火)～11月3日(金)</p>
+			</div>
+			<div class="main-menu-content">
+			<button onclick="location.href = 'https://put--esports--reiwa--sakura-github-io.translate.goog/schooling-system/en/reiwa-sakura-kaeritrain?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'">English</button>
+			<label class="switch">
+				<input id="mode-switch" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+			</div>
+		</div>
+		<div class="menu-button">
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button" id="menu-syosai">詳細</button>
+			<button class="button menu-button-sentaku" id="menu-zenkou">全体行程</button>
+		</div>
+		<div class="menu-button" id="menu-syosai-page" style="display:none;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+		</div>
+		<div class="menu-button" id="menu-zenkou-page" style="display:block;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button menu-inner-sentaku">帰り電車</button>
+		</div>
+		<div class="reiwa-sakura-main-content">
+			<div class="iki-container">
+				<div>
+				<div class="titlemozi"><h1>帰り電車 時刻表</h1>
+				<p>名鉄空港線 中部国際空港(鉄道)発→新可児行き停車駅一覧</p></div>
+					<ul class="results">
+						<li class="train">
+							<div class="train-time">
+								<span>18:51 発</span>
+							</div>
+							<div class="station-name">中部国際空港(鉄道)</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>18:54着</span>
+								<span>18:54発</span>
+							</div>
+							<div class="station-name">りんくう常滑</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>18:56着</span>
+								<span>18:57発</span>
+							</div>
+							<div class="station-name">常滑</div>
+						</li>
+						<div class="travel-time">4分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:01着</span>
+								<span>19:01発</span>
+							</div>
+							<div class="station-name">大野町</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:03着</span>
+								<span>19:04発</span>
+							</div>
+							<div class="station-name">新舞子</div>
+						</li>
+						<div class="travel-time">4分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:08着</span>
+								<span>19:08発</span>
+							</div>
+							<div class="station-name">古見(愛知県)</div>
+						</li>
+						<div class="travel-time">1分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:09着</span>
+								<span>19:10発</span>
+							</div>
+							<div class="station-name">朝倉(愛知県)</div>
+						</li>
+						<div class="travel-time">1分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:11着</span>
+								<span>19:12発</span>
+							</div>
+							<div class="station-name">寺本</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:14着</span>
+								<span>19:14発</span>
+							</div>
+							<div class="station-name">尾張横須賀</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:16着</span>
+								<span>19:17発</span>
+							</div>
+							<div class="station-name">太田川</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:20着</span>
+								<span>19:22発</span>
+							</div>
+							<div class="station-name">聚楽園</div>
+						</li>
+						<div class="travel-time">4分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:26着</span>
+								<span>19:26発</span>
+							</div>
+							<div class="station-name">大同町</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:28着</span>
+								<span>19:29発</span>
+							</div>
+							<div class="station-name">大江(愛知県)</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:32着</span>
+								<span>19:33発</span>
+							</div>
+							<div class="station-name">神宮前</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:35着</span>
+								<span>19:36発</span>
+							</div>
+							<div class="station-name">金山(愛知県)</div>
+						</li>
+						<div class="travel-time">4分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:40着</span>
+								<span>19:40発</span>
+							</div>
+							<div class="station-name">名鉄名古屋</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:42着</span>
+								<span>19:43発</span>
+							</div>
+							<div class="station-name">栄生</div>
+						</li>
+						<div class="travel-time">5分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:48着</span>
+								<span>19:48発</span>
+							</div>
+							<div class="station-name">上小田井</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:51着</span>
+								<span>19:51発</span>
+							</div>
+							<div class="station-name">西春</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:54着</span>
+								<span>19:55発</span>
+							</div>
+							<div class="station-name">岩倉(愛知県)</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>19:57着</span>
+								<span>19:58発</span>
+							</div>
+							<div class="station-name">石仏</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:00着</span>
+								<span>20:01発</span>
+							</div>
+							<div class="station-name">布袋</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:03着</span>
+								<span>20:03発</span>
+							</div>
+							<div class="station-name">江南(愛知県)</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:06着</span>
+								<span>20:07発</span>
+							</div>
+							<div class="station-name">柏森</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:09着</span>
+								<span>20:10発</span>
+							</div>
+							<div class="station-name">扶桑</div>
+						</li>
+						<div class="travel-time">1分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:11着</span>
+								<span>20:12発</span>
+							</div>
+							<div class="station-name">木津用水</div>
+						</li>
+						<div class="travel-time">1分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:13着</span>
+								<span>20:14発</span>
+							</div>
+							<div class="station-name">犬山口</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:16着</span>
+								<span>20:21発</span>
+							</div>
+							<div class="station-name">犬山</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:23着</span>
+								<span>20:24発</span>
+							</div>
+							<div class="station-name">富岡前</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:26着</span>
+								<span>20:26発</span>
+							</div>
+							<div class="station-name">善師野</div>
+						</li>
+						<div class="travel-time">5分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:31着</span>
+								<span>20:31発</span>
+							</div>
+							<div class="station-name">西可児</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:33着</span>
+								<span>20:34発</span>
+							</div>
+							<div class="station-name">可児川</div>
+						</li>
+						<div class="travel-time">2分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:36着</span>
+								<span>20:37発</span>
+							</div>
+							<div class="station-name">日本ライン今渡</div>
+						</li>
+						<div class="travel-time">3分</div>
+						<li class="train">
+							<div class="train-time">
+								<span>20:40着</span>
+							</div>
+							<div class="station-name">新可児</div>
+						</li>
+					<p>参照ページ ©Yahoo!JAPAN 路線情報</p>
+					</ul>
+				</div>
+			</div>
+			<script>
+				const googleBlueStations = ['日本ライン今渡'];
+				const googleGreenStations = ['犬山'];
+				const googleOrangeStations = ['中部国際空港(鉄道)'];
+				const pattern1 =['神宮前','金山(愛知県)','名鉄名古屋','岩倉(愛知県)','江南(愛知県)','西可児','可児川','新可児']
+				const trainStations = document.querySelectorAll('.train');
+				trainStations.forEach(train => {
+					const stationName = train.querySelector('.station-name').textContent.trim();
+					if (googleBlueStations.includes(stationName)) {
+						train.classList.add('bab');
+					} else if (googleGreenStations.includes(stationName)) {
+						train.classList.add('bag');
+					} else if (googleOrangeStations.includes(stationName)) {
+						train.classList.add('bao');
+					} else if (pattern1.includes(stationName)) {
+						train.classList.add('bada');
+					}
+				});
+			</script>
+		</div>
+	</div>
+	<script>
+		document.getElementById('menu-syosai').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'block';
+			document.getElementById('menu-zenkou-page').style.display = 'none';
+			document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+		});
+		document.getElementById('menu-zenkou').addEventListener('click', function () {
+			document.getElementById('menu-syosai-page').style.display = 'none';
+			document.getElementById('menu-zenkou-page').style.display = 'block';
+			document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+			document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+		});
+	</script>
+</body>
+</html>

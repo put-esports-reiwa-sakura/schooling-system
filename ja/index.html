@@ -1,0 +1,75 @@
+<!-- ©2023 REIWA SAKURA KOUTOU GAKUIN -->
+<!-- ©2023 令和さくら高等学院 -->
+<!-- Access to https://www.reiwa-sakura.net/ -->
+<!-- がくいんちょう: のだ (teacher) -->
+<!-- Main Programmer: Aoyama -->
+<!-- Check: Akita (teacher),hutamura (teacher), hashimoto -->
+<!-- Thank you to everyone who helped us. -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="format-detection" content="telephone=no">
+	<title>令和さくら高等学院-令和5年度スクーリング</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap">
+	<link rel="stylesheet" type="text/css" href="../command/mainstyle.css">
+	<link id="stylesheet-link" rel="stylesheet" href="../command/color-black.css">
+	<script src="../command/kirikae.js"></script>
+</head>
+<body>
+	<div class="menu-copyright">© 2023 reiwa-sakura, one person Aoyama programming team.</div>
+	<div style="margin-top:16px;">
+		<div class="main-menu-content">
+			<div class="main-menu-title">
+				<h2 class="menu-linkbutton">令和5年度スクーリングについて</h2>
+				<p>10月31日(火)～11月3日(金)</p>
+			</div>
+			<div class="main-menu-content">
+			<button onclick="location.href = 'https://put--esports--reiwa--sakura-github-io.translate.goog/schooling-system/en/?_x_tr_sl=ja&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'">English</button>
+			<label class="switch">
+				<input id="mode-switch" type="checkbox">
+				<span class="slider round"></span>
+			</label>
+			</div>
+		</div>
+		<div class="menu-button">
+			<button class="button" onclick="location.href = 'reiwa-sakura-osirase.html'">お知らせ</button>
+			<button class="button" id="menu-syosai">詳細</button>
+			<button class="button" id="menu-zenkou">全体行程</button>
+		</div>
+		<div class="menu-button" id="menu-setumei" style="display:block;padding:18px;">ボタンをおしてください。</div>
+		<div class="menu-button" id="menu-syosai-page" style="display:none;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
+		</div>
+		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
+		</div>
+		<div class="reiwa-sakura-main-content">
+		<h1>各ページにつながるボタンは上にあります。</h1>
+		<p>お知らせに詳しいお知らせがあります。</p>
+		</div>
+	</div>
+	<script>
+	document.getElementById('menu-syosai').addEventListener('click', function () {
+		document.getElementById('menu-syosai-page').style.display = 'block';
+		document.getElementById('menu-zenkou-page').style.display = 'none';
+		document.getElementById('menu-setumei').style.display = 'none';
+		document.getElementById('menu-syosai').classList.add('menu-button-sentaku');
+		document.getElementById('menu-zenkou').classList.remove('menu-button-sentaku');
+	});
+	document.getElementById('menu-zenkou').addEventListener('click', function () {
+		document.getElementById('menu-syosai-page').style.display = 'none';
+		document.getElementById('menu-zenkou-page').style.display = 'block';
+		document.getElementById('menu-setumei').style.display = 'none';
+		document.getElementById('menu-syosai').classList.remove('menu-button-sentaku');
+		document.getElementById('menu-zenkou').classList.add('menu-button-sentaku');
+	});
+	</script>
+</body>
+</html>
