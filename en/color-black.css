@@ -108,3 +108,11 @@ button {
 .osirase-tili1 {color:rgb(255, 0, 0);}
 .osirase-mario-on {background-color: #13af13;}
 .osirase-mario-off {background-color: #d9c242;}
+.mainosirase {
+    background-color:#2d2d2d;
+	max-width: 90%;
+	margin: 10px auto;
+	border-radius: 8px;
+	padding: 20px;
+	border: 2px solid #FFF;
+}
