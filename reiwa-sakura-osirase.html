@@ -37,14 +37,14 @@
 			<button class="button" id="menu-zenkou">全体行程</button>
 		</div>
 		<div class="menu-button" id="menu-syosai-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu'">荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu'">各教科の荷物</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru'">説明とﾙｰﾙ</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nimotu.html'">荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaku-nimotu.html'">各教科の荷物</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-setumeiruru.html'">説明とﾙｰﾙ</button>
 		</div>
 		<div class="menu-button" id="menu-zenkou-page" style="display:none;">
-			<button class="button" onclick="location.href = 'reiwa-sakura-nitime'">1～4日目</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain'">行き電車</button>
-			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain'">帰り電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-nitime.html'">1～4日目</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-ikitrain.html'">行き電車</button>
+			<button class="button" onclick="location.href = 'reiwa-sakura-kaeritrain.html'">帰り電車</button>
 		</div>
 		<div class="reiwa-sakura-main-content">
 			<div class="osirase-sousapanel">
@@ -53,352 +53,301 @@
 				<label for="toggleButton" id="toggleContainer">ON</label>
 				<input type="checkbox" id="toggleButton" checked="checked" onchange="toggleEventDisplay()">
 			</div>
-			<div class="osirase-content" id="eventContainer">			
-			</div>
-					<div class="reiwa-sakura-main-content">
-			<h1>こちらは当日使用するお知らせ(しおり早見表)ページです。</h1>
-			<div class="mainosirase">
-				<h1 style="text-align:center;font-size:2.3em;color:#ffafaf;">重要なお知らせ</h1>
-				<div class="mainosirase">
-				<h2>質問・疑問ございましたら、<br>お気軽にご連絡ください。</h2>
-				<img src="https://www.reiwa-sakura.net/images/header-tel.png" style="max-width: 100%;height: auto;">
-				</div>
-				<div class="mainosirase">
-				<h2>10月27日(金)に各自 しおり が配られます。</h2>
-				</div>
-				<div class="mainosirase">
-					<h1>[荷物]ページ訂正</h1>
-					<p>ご覧いただきありがとうございます。</p><br>
-					<p>誠に申し訳ございませんが、[荷物] ページにて以前の情報に誤りがございました。お詫び申し上げます。新たな情報に基づき、訂正いたします。</p><br>
-					<p>9.学習用具 の説明文に<strong>「ボールペンはお勧めしません。」</strong>と誤ってお伝えしましたが、正確な情報は以下の通りです：</p><br>
-					<p><strong>「ボールペン 必須 です。」</strong></p><br>
-					<p>必ずボールペンをご持参いただくようお願い申し上げます。最終日に"スクーリングに参加しました。"という書類にお子様の名前を記入する必要がありますので、ボールペンが不可欠です。</p><br>
-					<p>ご迷惑をおかけしましたことを深くお詫び申し上げます。何かご質問があれば、お気軽にお知らせください。ご協力いただき、誠にありがとうございます。</p>
-					</div>
-				<div class="mainosirase">
-					<h1><span style="font-weight:bold;color:aqua;">①</span> 航空輸送が禁止されているもの（危険物）</h1>
-					<p>法令により、航空輸送が禁止されているもの（危険物）は、機内持ち込みもお預かりもできません。</p>
-					<ul>
-						<li>爆発の恐れがあるもの</li>
-						<li>燃えやすいもの</li>
-						<li>人に危害を与えたり、または他の物件を損傷するおそれがあるもの</li>
-					</ul>
-					<p>以下は危険物に該当するため輸送できません。</p>
-					<ul>
-						<li>160Wh を超えるリチウムイオンバッテリーを使用した電子機器（バッテリー単独の輸送もできません）</li>
-						<li>加熱式弁当（発熱材付き弁当） ※加熱前・加熱後どちらも不可</li>
-						<li>瞬間冷却材 ※使用前・使用後どちらも不可</li>
-					</ul>
-					<div style="text-align:right;">
-						<img src="https://lh3.googleusercontent.com/fife/AK0iWDzLydDPM_fzOiFcacVsFHy_KiQbhCPvTUTFWSj_28x3jpAtJ6YKUbdbLZFLO8yEh1_UA6XCkNyEptQBXuBkGAm-hqvNcX3BciioL1vPR2UMOv2kbiPUvaxwWS8Tz1fVmm18yAsmCXPXolrFYR4Z9AtU1p0OJSQ-grsRlXhi88rYdvcm9Kjm-eVeKB1gEh3fs2ZY-5TRRvgVDWUEHdNw9vBPi7aVtsGD_1v1cVIOBPramyPFpfho3m8b27K7qyBcJp95koqbA2REO-xqXABOlJ04CySmFCIa7lGeBr1ADX_5vL_XbzquNPh5WbF8mFQskq2cfjErN6Z0baVRwSRDRfsZqIuDC-mJB6HFAIUO4MikeZome0CaqY_uYyx3q-Y64YxnT9u2y_pZlTlRjac9f6ZoO8guWdEgzCwXuyC5ObJSEgiYFrfClPhVECWMkmj3bEoI0dW0AR3OIl0zmJ4B1-BverQCOvc6JD6sNQuLsD2klLkyRwEbXO6ZNcKZqOHD4iIlKX23Nr8rQIcppq4S9n0YCXo6G1eSgXi3mFAy0fUITBWqxXnGlLohRiZLRbYpa7EiStu-MF0yI1E09RamwMTI5fyDsRiOTKr5vgV8K53HHfe_HXfyWuY63UfpOlt8fMNZHmW_kgTn1Vhd7i9rvjnxy-VWfUlF5UzZtVV8PyP-YSbcbaa-ws2ho5-G03JB2d6qr84M6y2bc4leEnodpLT6-rpwYT5gckr6OXAYRumoRQRaPVsoJHrL9XgBC0duESpfXHygFn2NXtPBFQocZaUVGW5PadwuF9uFrjSTZVk8MRLLrHOZuEpR3YHkYisDTN3elWSZgB9XJP3bJKzu3l6nhdQPvlgEBMqFH4iFrypTyacSurZi8RuOhX5I73SeaW2pCSIbu_tvQWHfklChY4YciLuROkpiUBRiJRntXA6mNlMcOLyGnRYiubdwBmxu6pkCtyapY_j6CP5Z9VtTpm-w-lW4rSz7rDq4yUhpqFWS_vFP-IiPVI5muVbN1n0ARdJ73WcWtrYT9KUCzEVtIqV8nTB8e7zmH5w0LLgrc8poqgzzjEddAtwUBCjdWy0mcI-ILPBn19OpD_lmIalbPaxR4fJh0TONB39RSVxg7P6N6nlrA5JBPyLGaDN2HOibYiYU6GMaBuZuWJxQ9JUmgs4BSTr96Wn_1P9X6W8veWPPtB26c_zta7j0IJ9TBynDSqWDPMyt1gqvPlZvSLQPoJt5Jyb7EoEaa6wDta9fq6sLScLkQlP5buuAfiGbsizpOmDaPEQ71o8X9z5UQQt7ZGnvjF6LwZEvEU2BgIzD2kq3Z4qeUvtzurDRNE72Js0GUNGhMYoo0D77d68j5Qp7-IDe3NrvfV1AmPjfka1uXCBB142aDfNdMCLPKUDCEYZ1wAI2p0SM9q373O2gzB7vKigDRvXbhEUnb-3MvDkU_ZpISdDx_UXASzNSmahiONRG2Ypa8FucWbadZyMV84YSWc8ymRahTn9eqrdqvMJM7KQj5_L8VLA05JpbsQIbF1H4BWKS9KA2MXq6vA=w1920-h919" style="max-width: 100%;height: auto;">
-					</div>
-				</div>
-				<div class="mainosirase">
-					<h1><span style="font-weight:bold;color:aqua;">②</span> 航空輸送が禁止されているもの（危険物）</h1>
-					<div style="text-align:center;">
-						<img src="https://lh3.googleusercontent.com/fife/AK0iWDzi0I1RQLNbO4mP8KGW_TD_4ssgecFk72SnZ7-msoOIkAr4Ih-z4cZ8YjLiMHXMFUDyGk8-6cqLAWhJGLi9dn2_WcI0jFoTbddgkQ7cxo9-TnPta3H15TPegQLJyAFzaUvazWfACFoIniRVwOkvFVNdX_jqwt9QBMEUeLVzYdFIec_8o0oF3Tr8DLjIMyTWey_AA8D_DEcArtvbVxNzxDE6ZvBhQeorLQ4RcLbP4qHcPe7Exq_wW1BF1FOyTEEKPq9az78vxrmPRWSwY4Ds6Yt7serIzp3QbjPUTQGgG8rFniV-eIXN15X9slJ7GBTuSHd5xv168tgnmlRVaZlxr_gpVwVzE9YKRU9uxnjXAnxv7xwBydGd4XMVpE6DnxnXBJml1GCr2rGVybaT4juU6GfzlKYy5leaaudQGBB-YTMkI52gG8es0PaxvxwU-PbS5-Bv1OfTk-L8D3tqgBL02sykWECjbs1mEb1OTv_7lOEK3iWASNqK7nBf-0K4QFaYzgWHHg9RFit5-J-QPe1_OqEKAOtN4A0YPWEYg5oscgBTVEBxWoFH14t7hcerUJMQ1kwOGgVISICozQ0WoM2DeYoLtp8ZC1ZkV_ai6HmVikgSjqmaZr6_I_7iHgALQOYpelPCfQSdegfadpt5QWGcXYlsydJYjBDvLfk8U3yEHVLYXzq92fR5Eb3BLKGD2oIuTm6KbHHZw675PwJJ5nP12g1do0GBigOhf_-3GiKUp5JF2jLU6EZo5IkrpGcvS5FwbYK9vDPXgVKVAuXJ4dCOonAsFSS5eSIvNbrvfo8nHlU4lCSWAsB_nx4GEEXSVfcjx0eYXRyMfurQ6mL7zkI6EdsMqjeKLIdBQqriah1Vvp97UJ8ZIqpP_x2XtJkxw1NBr9V81ekHJjGDHZZ7cvOYfjRymOO_sqPEQgGkA3gCArpscSr4Q9O1AS7wqxOolfeXt7UrWvkLnS5keoOYTzpylQfQMRzYzmiuJSSCnPfQRTQyDqhzdMZKcACl425yhrK6uUXMXXwv9ErhqR4I4f3OAS9qsCYPiyp9yNsniS_6NVvO6SFX8HLjwpWKYibCAeAWcTQP6hNdCiV4q5JdnA50tO45aR5NBfW5P6MIBj2ubXC04MetfjS_He6Usk2hBJ9GM0C529MEKGVZd4vY-02z2PUQcBu69mXvt8ZzegEzirAWmDY5_pQolzHpXmCQv5wOjIjCaODVkXWmD9QgKcjCLDORilePW4TBvIOOK6XNa-v-Hhuxxw4nylb2pVhStAW2erHgG5wlSx8C7fIXrGm3C8BQefPQwz1_lRdhvLxNFJh0fT6NDRHHYNlaeo2BSYsyqjipOBH_-8tX6gtT2HSWOeIfZhfDWx4DpzUCq81TB_9szK_r3MX9k0_vt_3Caz4ogwka1Gnx6RFSvDyfU0g7-GXCKaL8v3QKXfJuiQscCuzz88RsJ9o1_lG6vOwC8uHT5x91FN2VDxi1vo6OML818BRgPeOMJb4BX390f9txlpdL7ZaP1y0Vlbxhw0bsdAeVEf8090Ac9SzeFg=w2000-h1448" style="max-width: 100%;height: auto;">
-					</div>
-					<h1>モバイルバッテリーやパソコン</h1>
-					<p>リチウム電池、リチウムイオン電池を使用したモバイルバッテリー、電子機器から取り外したバッテリーは発火の危険性があるため、お手荷物としてお預かりできません。機内にお持ち込みください。(ノートパソコンを充電するモバイルバッテリー含む）</p>
-					<p>ノートパソコン、タブレットなどのリチウム金属電池・リチウムイオン電池を内蔵した携帯型電子機器は機内持ち込み、お預かりどちらも可能ですが、お預けになる場合は必ず電源をオフにし、ケースや衣類などで梱包するなど保護をしてください。</p>
-					<ul>
-						<li>リチウム金属電池はリチウム含有量が2g以下のもの、またはリチウムイオン電池はワット時定格量が 160wh 以下のもの</li>
-					</ul>
-				</div>
-			</div>
 		</div>
-			<script>
+		<div class="osirase-content" id="eventContainer"></div>
+		<script>
+			var currentDate = new Date();
+			var eventContainer = document.getElementById('eventContainer');
+			var toggleButton = document.getElementById('toggleButton');
+			var toggleContainer = document.getElementById('toggleContainer');
+			var toggleLabel = document.querySelector('label[for="toggleButton"]');
+			toggleLabel.textContent = '全部表示 OFF';
+			toggleLabel.classList.add("osirase-mario-on");
+			toggleLabel.classList.remove("osirase-mario-off");
+			function showEventDivs() {
 				var currentDate = new Date();
-				var eventContainer = document.getElementById('eventContainer');
-				var toggleButton = document.getElementById('toggleButton');
-				var toggleContainer = document.getElementById('toggleContainer');
-				var toggleLabel = document.querySelector('label[for="toggleButton"]');
-				toggleLabel.textContent = '全部表示 OFF';
-				toggleLabel.style.backgroundColor = '#13af13';
-
-				function showEventDivs() {
-					var currentDate = new Date();
-					var eventDivs = document.querySelectorAll('div[data-start][data-end]');
-					var isOn = toggleButton.checked;
-					eventDivs.forEach(function (eventDiv) {
-						var start = new Date(eventDiv.getAttribute('data-start'));
-						var end = new Date(eventDiv.getAttribute('data-end'));
-						if (isOn) {
-							if (currentDate >= start && currentDate <= end) {
-								eventDiv.style.display = 'block';
-							} else {
-								eventDiv.style.display = 'none';
-							}
-						} else {
+				var eventDivs = document.querySelectorAll('div[data-start][data-end]');
+				var isOn = toggleButton.checked;
+				eventDivs.forEach(function (eventDiv) {
+					var start = new Date(eventDiv.getAttribute('data-start'));
+					var end = new Date(eventDiv.getAttribute('data-end'));
+					if (isOn) {
+						if (currentDate >= start && currentDate <= end) {
 							eventDiv.style.display = 'block';
+						} else {
+							eventDiv.style.display = 'none';
 						}
-					});
-				}
-				function toggleEventDisplay() {
-					showEventDivs();
-					if (toggleButton.checked) {
-						toggleLabel.textContent = '全部表示 OFF';
-						toggleLabel.style.backgroundColor = '#13af13';
 					} else {
-						toggleLabel.textContent = '全部表示 ON';
-						toggleLabel.style.backgroundColor = '#d9c242';
+						eventDiv.style.display = 'block';
 					}
-				}
-				function manualUpdate() {
-					showEventDivs();
-					location.reload();
-				}
-				window.addEventListener('load', function () {
-					showEventDivs();
-					setInterval(showEventDivs, 1000);
 				});
-				toggleButton.addEventListener('click', toggleEventDisplay);
-				toggleContainer.addEventListener('click', toggleEventDisplay);
-				var currentDate = new Date();
-				fetch('https://raw.githubusercontent.com/put-esports-reiwa-sakura/schooling-system/main/spreadsheetdata.json', {
-					cache: 'no-store'
+			}
+			function toggleEventDisplay() {
+				showEventDivs();
+				if (toggleButton.checked) {
+					toggleLabel.textContent = '全部表示 OFF';
+					toggleLabel.classList.add("osirase-mario-on");
+					toggleLabel.classList.remove("osirase-mario-off");
+				} else {
+					toggleLabel.textContent = '全部表示 ON';
+					toggleLabel.classList.add("osirase-mario-off");
+					toggleLabel.classList.remove("osirase-mario-on");
+				}
+			}
+			function manualUpdate() {
+				showEventDivs();
+				location.reload();
+			}
+			window.addEventListener('load', function () {
+				showEventDivs();
+				setInterval(showEventDivs, 1000);
+			});
+			toggleButton.addEventListener('click', toggleEventDisplay);
+			toggleContainer.addEventListener('click', toggleEventDisplay);
+			var currentDate = new Date();
+			fetch('https://raw.githubusercontent.com/put-esports-reiwa-sakura/schooling-system/main/spreadsheetdata.json', {
+				cache: 'no-store'
+			})
+				.then(response => response.json())
+				.then(data => {
+					displayEventData(data);
+					displaytimedata(data);
 				})
-					.then(response => response.json())
-					.then(data => {
-						displayEventData(data);
-						displaytimedata(data);
-					})
-					.catch(error => {
-					var errorDiv = document.createElement("div");
-					if (error.message === "Failed to fetch") {
-					errorDiv.textContent = "ネットワークが不安定です。インターネットの接続を確認してください。";
-					} else if (error.message === "Network Error") {
-					errorDiv.textContent = "ネットワークエラーが発生しました。再度お試しください。";
-					} else if (error.message === "Request timeout") {
-					errorDiv.textContent = "アクセス数増加が原因だと思われますが、サーバーからの応答が遅くなっています。もう一度試してみてください。";
-					} else if (error.message === "Connection refused") {
-					errorDiv.textContent = "申し訳ございません。サーバーへの接続が拒否されてしまいました。お手数ですがしばらくした後再度お試しください。";
-					} else if (error.message === "No internet connection") {
-					errorDiv.textContent = "インターネットに接続されていません。インターネット接続を確認してください。";
-					} else if (error.message === "DNS resolution failed") {
-					errorDiv.textContent = "ホスト名を解決できません。ネットワーク設定を確認してください。";
-					} else if (error.message.includes("CORS policy") || error.message.includes("Cross-Origin Request Blocked")) {
-					errorDiv.textContent = "まさか...このエラーを表示させたアンタ...ハッカー..."; // クロスオリジンリクエストがブロックされました。この操作は許可されていません。
-					} else {
-					errorDiv.textContent = "想定外のエラーが発生しました: " + error.message +" お手数ですが、再度お試しください。";
-					}
-					errorDiv.classList.add("main-error-display");
-					eventContainer.innerHTML = "";
-					eventContainer.appendChild(errorDiv);
-				});
-				function displayEventData(data) {
-					var eventContainer = document.getElementById('eventContainer');
-					data.forEach(function(item) {
-						var eventDate = new Date(item.A);
+				.catch(error => {
+				var errorDiv = document.createElement("div");
+				if (error.message === "Failed to fetch") {
+				errorDiv.textContent = "ネットワークが不安定です。インターネットの接続を確認してください。";
+				} else if (error.message === "Network Error") {
+				errorDiv.textContent = "ネットワークエラーが発生しました。再度お試しください。";
+				} else if (error.message === "Request timeout") {
+				errorDiv.textContent = "アクセス数増加が原因だと思われますが、サーバーからの応答が遅くなっています。もう一度試してみてください。";
+				} else if (error.message === "Connection refused") {
+				errorDiv.textContent = "申し訳ございません。サーバーへの接続が拒否されてしまいました。お手数ですがしばらくした後再度お試しください。";
+				} else if (error.message === "No internet connection") {
+				errorDiv.textContent = "インターネットに接続されていません。インターネット接続を確認してください。";
+				} else if (error.message === "DNS resolution failed") {
+				errorDiv.textContent = "ホスト名を解決できません。ネットワーク設定を確認してください。";
+				} else if (error.message.includes("CORS policy") || error.message.includes("Cross-Origin Request Blocked")) {
+				errorDiv.textContent = "まさか...このエラーを表示させたアンタ...ハッカー..."; // クロスオリジンリクエストがブロックされました。この操作は許可されていません。
+				} else {
+				errorDiv.textContent = "想定外のエラーが発生しました: " + error.message +" お手数ですが、再度お試しください。";
+				}
+				errorDiv.classList.add("main-error-display");
+				eventContainer.innerHTML = "";
+				eventContainer.appendChild(errorDiv);
+			});
+			function displayEventData(data) {
+				var eventContainer = document.getElementById('eventContainer');
+				data.forEach(function(item) {
+					var eventDate = new Date(item.A);
 
-						if (eventDate.toDateString() === currentDate.toDateString()) {
-							var eventDiv = document.createElement('div');
-							if (item.L === 'ok' || item.L === '勉強') {
-								// パターン1. ok/勉強 の場合の処理
-								var startDateTime = new Date(eventDate);
-								var endDateTime = new Date(eventDate);
-								var currentTime = new Date();
-								var startParts = item.D.split(':');
-								startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
-								var endParts = item.E.split(':');
-								endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
-								var customParts = item.D.split(':');
-								var customHour = Number(customParts[0]);
-								var customMinute = Number(customParts[1]);
-								if (customMinute >= 30) {
-									customMinute -= 30;
-								} else {
-									customHour -= 1;
-									customMinute += 30;
-								}
-								eventDiv.setAttribute('data-start', eventDate.toDateString() + ' ' + customHour + ':' + customMinute);
-								eventDiv.setAttribute('data-custom', item.D);
-								eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
-								eventDiv.style.display = 'none';
-								eventDiv.className = 'osirase-content';
-								eventDiv.id = 'osirase-okbenkyo';
-								eventDiv.setAttribute('zyoutai', 'okbenkyo');
-								var content = document.createElement('h2');
-								var details = document.createElement('p');
-								function updateCountdown() {
-									var currentTime = new Date();
-									var timeDiff = startDateTime - currentTime;
-									var minutesUntilStart = Math.floor(timeDiff / 60000);
-									var endTimeDiff = endDateTime - currentTime;
-									var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
-									if (minutesUntilStart < 0) {
-										if (minutesUntilEnd < 0) {
-											content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
-										} else {
-											content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
-										}
-									} else {
-										var countdownClass = '';
-										if (minutesUntilStart <= 2) {
-											countdownClass = 'osirase-tili1';
-										} else if (minutesUntilStart <= 5) {
-											countdownClass = 'osirase-tili2';
-										}
-										content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
-										content.className = countdownClass;
-									}
-								}
-								updateCountdown();
-								setInterval(updateCountdown, 30000);
-								let detailsText = '';
-								if (item.G !== "") {detailsText += "場所：" + item.G + "<br>";}
-								if (item.P !== "") {detailsText += "持ち物：" + item.P + "<br><br>" ;}
-								if (item.N !== "") {detailsText += "タイトル：" + item.N + "<br><br>";}
-								if (item.O !== "") {detailsText += item.O ;}
-								if (item.O !== "") {detailsText += "<br><br>" ;}
-								if (item.I !== "") {detailsText += "<span style='color: #ffcf41;'>注意：" + item.I + "</span>";}
-								details.innerHTML = detailsText;
-								eventDiv.appendChild(content);
-								eventDiv.appendChild(details);
-							} else if (item.L === '特別') {
-								// パターン2. 特別 の場合の処理
-								var startDateTime = new Date(eventDate);
-								var endDateTime = new Date(eventDate);
-								var currentTime = new Date();
-
-								var startParts = item.D.split(':');
-								startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
-								var endParts = item.E.split(':');
-								endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
-
-								var customParts = item.D.split(':');
-								var customHour = Number(customParts[0]);
-								var customMinute = Number(customParts[1]);
-
-								if (customMinute >= 30) {
-									customMinute -= 30;
-								} else {
-									customHour -= 1;
-									customMinute += 30;
-								}
-
-								eventDiv.setAttribute('data-start', eventDate.toDateString() + ' ' + customHour + ':' + customMinute);
-								eventDiv.setAttribute('data-custom', item.D);
-								eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
-								eventDiv.style.display = 'none';
-								eventDiv.className = 'osirase-content';
-								eventDiv.id = 'osirase-okbenkyo';
-								eventDiv.setAttribute('zyoutai', 'tokubetu');
-
-								var content = document.createElement('h2');
-								var details = document.createElement('p');
-
-								function updateCountdown() {
-									var currentTime = new Date();
-									var timeDiff = startDateTime - currentTime;
-									var minutesUntilStart = Math.floor(timeDiff / 60000);
-									var endTimeDiff = endDateTime - currentTime;
-									var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
-
-									if (minutesUntilStart < 0) {
-										if (minutesUntilEnd < 0) {
-											content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
-										} else {
-											content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
-										}
-									} else {
-										content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
-									}
-								}
-								updateCountdown();
-								setInterval(updateCountdown, 30000);
-								let detailsText = '';
-								if (item.G !== "") {detailsText += item.G + "<br>";}
-								if (item.H !== "") {detailsText += item.H + "<br>";}
-								if (item.I !== "") {detailsText += item.I + "<br>";}
-								if (item.J !== "") {detailsText += item.J ;}
-								details.innerHTML = detailsText;
-								eventDiv.appendChild(content);
-								eventDiv.appendChild(details);
-							} else if (item.L === 'お知らせ') {
-								// パターン3. お知らせ の場合の処理
-								var startDateTime = new Date(currentDate);
-								startDateTime.setHours(1, 0, 0, 0);
-								var endDateTime = new Date(eventDate);
-
-								var startParts = item.D.split(':');
-								startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
-								var endParts = item.E.split(':');
-								endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
-
-								eventDiv.setAttribute('data-start', startDateTime.toDateString() + ' ' + startParts[0] + ':' + startParts[1]);
-								eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
-								eventDiv.className = 'osirase-content';
-								eventDiv.setAttribute('zyoutai', 'osirase');
-
-								var content = document.createElement('h2');
-								content.innerHTML = item.F;
-								var details = document.createElement('p');
-								let detailsText = '';
-								if (item.G !== "") {detailsText += item.G + "<br>";}
-								if (item.H !== "") {detailsText += item.H + "<br>";}
-								if (item.I !== "") {detailsText += item.I + "<br>";}
-								if (item.J !== "") {detailsText += item.J ;}
-								details.innerHTML = detailsText;
-								eventDiv.appendChild(content);
-								eventDiv.appendChild(details);
-							} else if (item.L === '常時表示') {
-								// パターン4. 常時表示 の場合の処理
-								var startDateTime = new Date(currentDate);
-								startDateTime.setHours(1, 0, 0, 0);
-								var endDateTime = new Date(eventDate);
-
-								var endParts = item.E.split(':');
-								endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
-
-								eventDiv.setAttribute('data-start', startDateTime.toDateString() + ' 0:01');
-								eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
-								eventDiv.className = 'osirase-content';
-								eventDiv.setAttribute('zyoutai', 'zyouzi');
-
-								var content = document.createElement('h2');
-								content.textContent = item.F;
-								var details = document.createElement('p');
-								let detailsText = '';
-								if (item.G !== "") {detailsText += item.G + "<br>";}
-								if (item.H !== "") {detailsText += item.H + "<br>";}
-								if (item.I !== "") {detailsText += item.I + "<br>";}
-								if (item.J !== "") {detailsText += item.J ;}
-								details.innerHTML = detailsText;
-								eventDiv.appendChild(content);
-								eventDiv.appendChild(details);
+					if (eventDate.toDateString() === currentDate.toDateString()) {
+						var eventDiv = document.createElement('div');
+						if (item.L === 'ok' || item.L === '勉強') {
+							// パターン1. ok/勉強 の場合の処理
+							var startDateTime = new Date(eventDate);
+							var endDateTime = new Date(eventDate);
+							var currentTime = new Date();
+							var startParts = item.D.split(':');
+							startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
+							var endParts = item.E.split(':');
+							endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
+							var customParts = item.D.split(':');
+							var customHour = Number(customParts[0]);
+							var customMinute = Number(customParts[1]);
+							if (customMinute >= 30) {
+								customMinute -= 30;
+							} else {
+								customHour -= 1;
+								customMinute += 30;
 							}
-							eventContainer.appendChild(eventDiv);
+							eventDiv.setAttribute('data-start', eventDate.toDateString() + ' ' + customHour + ':' + customMinute);
+							eventDiv.setAttribute('data-custom', item.D);
+							eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
+							eventDiv.style.display = 'none';
+							eventDiv.className = 'osirase-content';
+							eventDiv.id = 'osirase-okbenkyo';
+							eventDiv.setAttribute('zyoutai', 'okbenkyo');
+							var content = document.createElement('h2');
+							var details = document.createElement('p');
+							function updateCountdown() {
+								var currentTime = new Date();
+								var timeDiff = startDateTime - currentTime;
+								var minutesUntilStart = Math.floor(timeDiff / 60000);
+								var endTimeDiff = endDateTime - currentTime;
+								var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
+								if (minutesUntilStart < 0) {
+									if (minutesUntilEnd < 0) {
+										content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
+									} else {
+										content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
+									}
+								} else {
+									var countdownClass = '';
+									if (minutesUntilStart <= 2) {
+										countdownClass = 'osirase-tili1';
+									} else if (minutesUntilStart <= 5) {
+										countdownClass = 'osirase-tili2';
+									}
+									content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
+									content.className = countdownClass;
+								}
+							}
+							updateCountdown();
+							setInterval(updateCountdown, 30000);
+							let detailsText = '';
+							if (item.G !== "") {detailsText += "場所：" + item.G + "<br>";}
+							if (item.P !== "") {detailsText += "持ち物：" + item.P + "<br><br>" ;}
+							if (item.N !== "") {detailsText += "タイトル：" + item.N + "<br><br>";}
+							if (item.O !== "") {detailsText += item.O ;}
+							if (item.O !== "") {detailsText += "<br><br>" ;}
+							if (item.I !== "") {detailsText += "<span style='color: #ffcf41;'>注意：" + item.I + "</span>";}
+							details.innerHTML = detailsText;
+							eventDiv.appendChild(content);
+							eventDiv.appendChild(details);
+						} else if (item.L === '特別') {
+							// パターン2. 特別 の場合の処理
+							var startDateTime = new Date(eventDate);
+							var endDateTime = new Date(eventDate);
+							var currentTime = new Date();
+
+							var startParts = item.D.split(':');
+							startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
+							var endParts = item.E.split(':');
+							endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
+
+							var customParts = item.D.split(':');
+							var customHour = Number(customParts[0]);
+							var customMinute = Number(customParts[1]);
+
+							if (customMinute >= 30) {
+								customMinute -= 30;
+							} else {
+								customHour -= 1;
+								customMinute += 30;
+							}
+
+							eventDiv.setAttribute('data-start', eventDate.toDateString() + ' ' + customHour + ':' + customMinute);
+							eventDiv.setAttribute('data-custom', item.D);
+							eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
+							eventDiv.style.display = 'none';
+							eventDiv.className = 'osirase-content';
+							eventDiv.id = 'osirase-okbenkyo';
+							eventDiv.setAttribute('zyoutai', 'tokubetu');
+
+							var content = document.createElement('h2');
+							var details = document.createElement('p');
+
+							function updateCountdown() {
+								var currentTime = new Date();
+								var timeDiff = startDateTime - currentTime;
+								var minutesUntilStart = Math.floor(timeDiff / 60000);
+								var endTimeDiff = endDateTime - currentTime;
+								var minutesUntilEnd = Math.floor(endTimeDiff / 60000);
+
+								if (minutesUntilStart < 0) {
+									if (minutesUntilEnd < 0) {
+										content.innerHTML = item.F + ' ' + item.H + ' <span class="ended">終了しました</span>';
+									} else {
+										content.innerHTML = item.F + ' ' + item.H + ' <span class="started">開始しました</span> ～' + item.E;
+									}
+								} else {
+									content.innerHTML = item.F + ' ' + item.H + ' ' + item.D + '～' + item.E + ' 開始まで' + minutesUntilStart + '分';
+								}
+							}
+							updateCountdown();
+							setInterval(updateCountdown, 30000);
+							let detailsText = '';
+							if (item.G !== "") {detailsText += item.G + "<br>";}
+							if (item.H !== "") {detailsText += item.H + "<br>";}
+							if (item.I !== "") {detailsText += item.I + "<br>";}
+							if (item.J !== "") {detailsText += item.J ;}
+							details.innerHTML = detailsText;
+							eventDiv.appendChild(content);
+							eventDiv.appendChild(details);
+						} else if (item.L === 'お知らせ') {
+							// パターン3. お知らせ の場合の処理
+							var startDateTime = new Date(currentDate);
+							startDateTime.setHours(1, 0, 0, 0);
+							var endDateTime = new Date(eventDate);
+
+							var startParts = item.D.split(':');
+							startDateTime.setHours(Number(startParts[0]), Number(startParts[1]), 0, 0);
+							var endParts = item.E.split(':');
+							endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
+
+							eventDiv.setAttribute('data-start', startDateTime.toDateString() + ' ' + startParts[0] + ':' + startParts[1]);
+							eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
+							eventDiv.className = 'osirase-content';
+							eventDiv.setAttribute('zyoutai', 'osirase');
+
+							var content = document.createElement('h2');
+							content.innerHTML = item.F;
+							var details = document.createElement('p');
+							let detailsText = '';
+							if (item.G !== "") {detailsText += item.G + "<br>";}
+							if (item.H !== "") {detailsText += item.H + "<br>";}
+							if (item.I !== "") {detailsText += item.I + "<br>";}
+							if (item.J !== "") {detailsText += item.J ;}
+							details.innerHTML = detailsText;
+							eventDiv.appendChild(content);
+							eventDiv.appendChild(details);
+						} else if (item.L === '常時表示') {
+							// パターン4. 常時表示 の場合の処理
+							var startDateTime = new Date(currentDate);
+							startDateTime.setHours(1, 0, 0, 0);
+							var endDateTime = new Date(eventDate);
+
+							var endParts = item.E.split(':');
+							endDateTime.setHours(Number(endParts[0]), Number(endParts[1]), 0, 0);
+
+							eventDiv.setAttribute('data-start', startDateTime.toDateString() + ' 0:01');
+							eventDiv.setAttribute('data-end', endDateTime.toDateString() + ' ' + endParts[0] + ':' + endParts[1]);
+							eventDiv.className = 'osirase-content';
+							eventDiv.setAttribute('zyoutai', 'zyouzi');
+
+							var content = document.createElement('h2');
+							content.innerHTML = item.F;
+							var details = document.createElement('p');
+							let detailsText = '';
+							if (item.G !== "") {detailsText += item.G + "<br>";}
+							if (item.H !== "") {detailsText += item.H + "<br>";}
+							if (item.I !== "") {detailsText += item.I + "<br>";}
+							if (item.J !== "") {detailsText += item.J ;}
+							details.innerHTML = detailsText;
+							eventDiv.appendChild(content);
+							eventDiv.appendChild(details);
 						}
-					});
-				}
-				function displaytimedata(data) {
-					var matchingRow = null;
-					for (var key in data) {
-						if (data.hasOwnProperty(key) && data[key].A === todayDate) {
-							matchingRow = data[key];
-							break;
-						}
+						eventContainer.appendChild(eventDiv);
 					}
-					var dValueDisplay = document.getElementById("osirase-value");
-					var keyValue = matchingRow ? matchingRow.B : "の日付と一致するデータが見つかりませんでした";
-					dValueDisplay.innerHTML = keyValue;
+				});
+			}
+			function displaytimedata(data) {
+				var matchingRow = null;
+				for (var key in data) {
+					if (data.hasOwnProperty(key) && data[key].A === todayDate) {
+						matchingRow = data[key];
+						break;
+					}
 				}
-				function updateCurrentTime() {
-					var timeDisplay = document.getElementById("osirase-time-display");
-					var currentTime = new Date();
-					var timeString = "" + currentTime.toLocaleTimeString();
-					timeDisplay.innerHTML = timeString;
-				}
-				var today = new Date();
-				var dd = String(today.getDate()).padStart(2, '0');
-				var mm = String(today.getMonth() + 1).padStart(2, '0');
-				var yyyy = today.getFullYear();
-				var todayDate = yyyy + '/' + mm + '/' + dd;
-				updateCurrentTime();
-				setInterval(updateCurrentTime, 1000);
-			</script>
-		</div>
+				var dValueDisplay = document.getElementById("osirase-value");
+				var keyValue = matchingRow ? matchingRow.B : "の日付と一致するデータが見つかりませんでした";
+				dValueDisplay.innerHTML = keyValue;
+			}
+			function updateCurrentTime() {
+				var timeDisplay = document.getElementById("osirase-time-display");
+				var currentTime = new Date();
+				var timeString = "" + currentTime.toLocaleTimeString();
+				timeDisplay.innerHTML = timeString;
+			}
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0');
+			var yyyy = today.getFullYear();
+			var todayDate = yyyy + '/' + mm + '/' + dd;
+			updateCurrentTime();
+			setInterval(updateCurrentTime, 1000);
+		</script>
 	</div>
 	<script>
 		document.getElementById('menu-syosai').addEventListener('click', function () {
