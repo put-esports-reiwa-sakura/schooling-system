@@ -21,6 +21,41 @@ button {
 	transition: background-color 0.3s ease;
 	font-size: 24px;
 }
+
+.reiwa-sakura-rogo1 { fill: #8fc31f; }
+.reiwa-sakura-rogo2 { fill: #f29c97; }
+.logo {
+	width: 100px;
+	height: 100px;
+	animation: rotateLogo 8s linear infinite;
+}
+.reiwa-sakura-rogo2 {
+	animation: petalAnimation 4s linear 0.5s infinite;
+	transform-origin: center;
+}
+@keyframes rotateLogo {
+	0%, 100% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes petalAnimation {
+	0%, 100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	25% {
+		transform: translateY(0) rotate(0deg);
+	}
+	50% {
+		transform: translateY(10px) rotate(180deg);
+	}
+	75% {
+		transform: translateY(10px) rotate(360deg);
+	}
+}
+
 .main-menu-content {
 	display: flex;
 	align-items: center;
